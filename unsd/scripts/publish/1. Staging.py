@@ -140,15 +140,15 @@ def main():
     #         update_sharing=True
     #         )
      
-    process_sdg_information(series_code=['SI_COV_BENFTS'],run_cleanup=False)
-     #def process_sdg_information(goal_code=None, 
-     #                       target_code=None, 
-     #                       indicator_code=None, 
-     #                       series_code=None,
-     #                       property_update_only=False, 
-     #                       update_symbology=False, 
-     #                       run_cleanup=False, 
-     #                       update_sharing=True):
+    process_sdg_information()
+    #process_sdg_information(goal_code=None, 
+    #                       target_code=None, 
+    #                       indicator_code=None, 
+    #                       series_code=None,
+    #                       property_update_only=False, 
+    #                       update_symbology=True, 
+    #                       run_cleanup=False, 
+    #                       update_sharing=True):
     
     #process_sdg_information(
     #        property_update_only=True, 
@@ -444,8 +444,8 @@ def process_sdg_information(goal_code=None,
                             indicator_code=None, 
                             series_code=None,
                             property_update_only=False, 
-                            update_symbology=False, 
-                            run_cleanup=False, 
+                            update_symbology=True, 
+                            run_cleanup=True, 
                             update_sharing=True):
     try:
 
@@ -460,6 +460,8 @@ def process_sdg_information(goal_code=None,
         layer_json_data = get_layer_template()
         
         for series in series_metadata:
+            
+            ### series = series_metadata[0]
             
             # Determine whether this query only processes a specific goal, target,
             # indicator or series, and if so, whether the current series is *not* 
@@ -535,6 +537,7 @@ def process_sdg_information(goal_code=None,
 
             
             print("\nProcessing series code:", series["indicatorCode"], series["seriesCode"])
+            #### property_update_only = False
             try:
                 if property_update_only:
                     online_item = find_online_item(series_properties["title"])
