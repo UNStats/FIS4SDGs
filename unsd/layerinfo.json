@@ -1,0 +1,151 @@
+{
+	"layerInfo": {
+	  "currentVersion": 10.51,
+	  "id": 0,
+	  "name": "",
+	  "type": "Table",
+	  "displayField": "",
+	  "description": "",
+	  "copyrightText": "",
+	  "defaultVisibility": true,
+	  "relationships": [],
+	  "isDataVersioned": false,
+	  "supportsCalculate": true,
+	  "supportsTruncate": false,
+	  "supportsAttachmentsByUploadId": true,
+	  "supportsRollbackOnFailureParameter": true,
+	  "supportsStatistics": true,
+	  "supportsAdvancedQueries": true,
+	  "supportsValidateSql": true,
+	  "supportsCoordinatesQuantization": true,
+	  "supportsApplyEditsWithGlobalIds": false,
+	  "advancedQueryCapabilities": {
+		"supportsPagination": true,
+		"supportsPaginationOnAggregatedQueries": true,
+		"supportsQueryRelatedPagination": true,
+		"supportsQueryWithDistance": true,
+		"supportsReturningQueryExtent": true,
+		"supportsStatistics": true,
+		"supportsOrderBy": true,
+		"supportsDistinct": true,
+		"supportsQueryWithResultType": true,
+		"supportsSqlExpression": true,
+		"supportsAdvancedQueryRelated": true,
+		"supportsReturningGeometryCentroid": false,
+		"supportsQueryWithDatumTransformation": true
+	  },
+	  "useStandardizedQueries": false,
+	  "geometryType": "esriGeometryPoint",
+	  "drawingInfo": {
+		"renderer": {
+		  "visualVariables": [
+			{
+			  "type": "sizeInfo",
+			  "field": "latest_value",
+			  "valueExpression": null,
+			  "valueUnit": "unknown",
+			  "minSize": 6,
+			  "maxSize": 37.5,
+			  "minDataValue": 0,
+			  "maxDataValue": 1
+			}
+		  ],
+		  "authoringInfo": {
+			"visualVariables": [
+			  {
+				"type": "sizeInfo",
+				"minSliderValue": 0,
+				"maxSliderValue": 1
+			  }
+			]
+		  },
+		  "type": "classBreaks",
+		  "field": "latest_value",
+		  "defaultSymbol": {
+			"color": [
+			  128,
+			  128,
+			  128,
+			  131
+			],
+			"size": 6,
+			"angle": 0,
+			"xoffset": 0,
+			"yoffset": 0,
+			"type": "esriSMS",
+			"style": "esriSMSCircle",
+			"outline": {
+			  "color": [
+				153,
+				153,
+				153,
+				255
+			  ],
+			  "width": 0.25,
+			  "type": "esriSLS",
+			  "style": "esriSLSSolid"
+			}
+		  },
+		  "minValue": -9007199254740991,
+		  "classBreakInfos": [
+			{
+			  "symbol": {
+				"color": [
+				  227,
+				  139,
+				  79,
+				  255
+				],
+				"size": 6,
+				"angle": 0,
+				"xoffset": 0,
+				"yoffset": 0,
+				"type": "esriSMS",
+				"style": "esriSMSCircle",
+				"outline": {
+				  "color": [
+					255,
+					255,
+					255,
+					255
+				  ],
+				  "width": 0.25,
+				  "type": "esriSLS",
+				  "style": "esriSLSSolid"
+				}
+			  },
+			  "classMaxValue": 9007199254740991
+			}
+		  ],
+		  "defaultLabel": "Other"
+		},
+		"transparency": 20
+	  }
+	},
+	"allowGeometryUpdates": true,
+	"hasAttachments": false,
+	"htmlPopupType": "",
+	"hasM": false,
+	"hasZ": false,
+	"globalIdField": "",
+	"typeIdField": "",
+	"fields": [
+	  
+	],
+	"indexes": [
+	  
+	],
+	"types": [
+	  
+	],
+	"templates": [
+	  
+	],
+	"supportedQueryFormats": "JSON, geoJSON",
+	"hasStaticData": false,
+	"maxRecordCount": -1,
+	"standardMaxRecordCount": 32000,
+	"tileMaxRecordCount": 8000,
+	"maxRecordCountFactor": 1,
+	"capabilities": "Query, Extract"
+  }
