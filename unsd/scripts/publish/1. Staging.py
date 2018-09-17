@@ -109,15 +109,15 @@ def main():
     # open_data group_id:  Provide the Group ID from ArcGIS Online the Data will 
     # be shared with. This should be a staging group to get the data ready for 
     # publishing.
-    # open_data_group_id = '967dbf64d680450eaf424ac4a38799ad'   # Travis
+    #open_data_group_id = '967dbf64d680450eaf424ac4a38799ad'   # Travis
     open_data_group_id = 'ad013d2911184063a0f0c97d252daf32'     # Luis
     open_data_group = gis_online_connection.groups.get(open_data_group_id)
 
         
     # Get data and metadata from the local branch ("r" prefix means "raw string 
     # literal"). 
-    data_dir = r"C:/Users/L.GonzalezMorales/Documents/GitHub/FIS4SDGs/unsd/data/csv"
-    metadata_dir = r"C:/Users/L.GonzalezMorales/Documents/GitHub/FIS4SDGs/unsd/"
+    data_dir = r"../../data/csv"
+    metadata_dir = r"../../"
     
     
     # Access to the users items may be needed in order to 
@@ -269,7 +269,7 @@ def generate_renderer_infomation(feature_item,
         definition_update_params["drawingInfo"]["renderer"] = visual_params["drawingInfo"]["renderer"]
         if "editingInfo" in definition_update_params:
             del definition_update_params["editingInfo"]
-        definition_update_params["capabilities"] = "Query, Extract"
+        definition_update_params["capabilities"] = "Query, Extract, Sync"
         print('Update Feature Service Symbology')
         definition_item.manager.update_definition(definition_update_params)
 
@@ -388,7 +388,7 @@ def publish_csv(series,
                     return None
                 else:
                     publish_parameters["name"] = csv_item_properties["title"]
-                    publish_parameters["layerInfo"]["name"] = csv_item_properties["snippet"]
+                    publish_parameters["layerInfo"]["name"] = csv_item_properties["layer_title"]
                     print('Publishing Feature Service....')
                     csv_lyr = csv_item.publish(publish_parameters=publish_parameters, overwrite=True)
 
@@ -510,8 +510,9 @@ def process_sdg_information(goal_code=None,
             indicator_properties["thumbnail"] = thumbnail
             
             series_properties = dict()
-            series_properties["title"] = indicator_properties["title"] + ": " + series["seriesDescription"]
-            snippet = series_properties["title"] #series["code"] + ": " + series["description"]
+            series_properties["title"] = indicator_properties["title"] + ": " + series["seriesDescription"].replace('%','percent')
+            series_properties["layer_title"] = series["seriesDescription"].replace('%','percent').replace(",",' ').replace('/',' ')
+            snippet = series_properties["title"]
             series_properties["snippet"] = (snippet[:250] + "..") if len(snippet) > 250 else snippet
             series_properties["description"] = \
                 "<p><strong>Series " + series["seriesCode"] + ": </strong>" + series["seriesDescription"] + "</p>" + \
