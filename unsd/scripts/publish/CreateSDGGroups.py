@@ -127,41 +127,6 @@ def get_seriesMetadata():
         print("Unexpected error:", sys.exc_info()[0])
         return None
     
-# ### Find an existing online item for an indicator
-def find_online_item(title,
-                     force_find=True):
-        
-    try:
-
-        # Search for this ArcGIS Online Item
-        query_string = "title:'{}' AND owner:{}".format(title, online_username)
-        print('Searching for ' + title)
-        # The search() method returns a list of Item objects that match the 
-        # search criteria
-        search_results = gis_online_connection.content.search(query_string)
-
-        if search_results:
-            for search_result in search_results:
-                if search_result["title"] == title:
-                    #return search_result
-                    print ( search_result )
-
-
-        # If the Item was not found in the search but it should exist use Force 
-        # Find to loop all the users items (this could take a bit)
-        if force_find:
-            user = gis_online_connection.users.get(online_username)
-            user_items = user.items(folder='Open Data', max_items=800)
-            for item in user_items:
-                if item["title"] == title:
-                    print(item)
-                    return item
-
-        return None
-    except:
-        print("Unexpected error:", sys.exc_info()[0])
-        return None
-
 def createGroup(group_info):
     try:
         # Add the Service Definition to the Enterprise site
@@ -249,10 +214,6 @@ def process_sdg_information(goal_code=None):
                 series_tags.append(series["seriesRelease"])
                 
                 series_properties["tags"] = series_tags """
-
-
-
-
     except:
         traceback.print_exc()
 
