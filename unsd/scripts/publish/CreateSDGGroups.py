@@ -189,7 +189,6 @@ def process_sdg_information(goal_code=None):
                 createGroup(goal_properties)
                 create_groups.append(str(series["goalCode"]))
                 
-                
                 """# Create a dictionary containing the annotations for the current item's target
                 target_properties = dict()
                 
