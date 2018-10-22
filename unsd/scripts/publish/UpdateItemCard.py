@@ -118,94 +118,9 @@ def main():
 
     #Find the Item you are looking to update (this section could be scripted to input many items)
     update_card_information('41f1252fa7ab435e8bb812523200a8b0','1.1.1')
-
     return
 
 ###############################################################################
-# ### Find an existing online item for an indicator
-def find_online_item(title,
-                     force_find=True):
-        
-    try:
-
-        # Search for this ArcGIS Online Item
-        query_string = "title:'{}' AND owner:{}".format(title, online_username)
-        print('Searching for ' + title)
-        # The search() method returns a list of Item objects that match the 
-        # search criteria
-        search_results = gis_online_connection.content.search(query_string)
-
-        if search_results:
-            for search_result in search_results:
-                if search_result["title"] == title:
-                    #return search_result
-                    print ( search_result )
-
-
-        # If the Item was not found in the search but it should exist use Force 
-        # Find to loop all the users items (this could take a bit)
-        if force_find:
-            user = gis_online_connection.users.get(online_username)
-            user_items = user.items(folder='Open Data', max_items=800)
-            for item in user_items:
-                if item["title"] == title:
-                    print(item)
-                    return item
-
-        return None
-    except:
-        print("Unexpected error:", sys.exc_info()[0])
-        return None
-    
-
-def generate_renderer_infomation(feature_item, 
-                                 statistic_field="latest_value", 
-                                 color=None):
-    try:
-        if len(color) == 3:
-            color.append(130)  ###---specifies the alpha channel of the color
-
-        layer_json_data = get_layer_template()
-        
-        #get the min/max for this item
-        visual_params = layer_json_data["layerInfo"]
-        definition_item = feature_item.layers[0]
-
-        #get the min/max values
-        out_statistics= [{"statisticType": "max",
-                          "onStatisticField": "latest_value", 
-                          "outStatisticFieldName": "latest_value_max"},
-                        {"statisticType": "min",
-                         "onStatisticField": "latest_value", 
-                         "outStatisticFieldName": "latest_value_min"}]
-        
-        feature_set = definition_item.query(where='1=1',out_statistics=out_statistics)
-
-        max_value = feature_set.features[0].attributes["latest_value_max"]
-        min_value = feature_set.features[0].attributes["latest_value_min"]
-        
-        visual_params["drawingInfo"]["renderer"]["visualVariables"][0]["minDataValue"] = min_value
-        visual_params["drawingInfo"]["renderer"]["visualVariables"][0]["maxDataValue"] = max_value
-
-        visual_params["drawingInfo"]["renderer"]["authoringInfo"]["visualVariables"][0]["minSliderValue"] = min_value
-        visual_params["drawingInfo"]["renderer"]["authoringInfo"]["visualVariables"][0]["maxSliderValue"] = max_value
-        
-        visual_params["drawingInfo"]["renderer"]["classBreakInfos"][0]["symbol"]["color"] = color
-        visual_params["drawingInfo"]["renderer"]["transparency"] = 25
-
-        definition_update_params = definition_item.properties
-        definition_update_params["drawingInfo"]["renderer"] = visual_params["drawingInfo"]["renderer"]
-        if "editingInfo" in definition_update_params:
-            del definition_update_params["editingInfo"]
-        definition_update_params["capabilities"] = "Query, Extract, Sync"
-        print('Update Feature Service Symbology')
-        definition_item.manager.update_definition(definition_update_params)
-
-        return
-    except:
-        print("Unexpected error in generate_renderer_infomation:", sys.exc_info()[0])
-        return None
-
 def update_card_information(item_id, indicator_code=None):
     try:
         series_metadata = get_seriesMetadata()
