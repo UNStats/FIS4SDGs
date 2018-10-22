@@ -84,12 +84,9 @@ def main():
     # Set up the global information and variables
     global data_dir                # Directory where csv files are located
     global metadata_dir            # Directory where meatadata files are located
-    global open_data_group         # ArcGIS group the data will be shared with
     global failed_series
     global online_username
     global gis_online_connection
-    global layer_json_data
-    global user_items
 
     failed_series = []
     
@@ -110,11 +107,6 @@ def main():
     # literal"). 
     data_dir = r"../../data/csv"
     metadata_dir = r"../../"
-    
-    
-    # Access to the users items may be needed in order to 
-    # carry out searches and updates
-    user = gis_online_connection.users.get(online_username)
 
     #Find the Item you are looking to update (this section could be scripted to input many items)
     update_card_information('41f1252fa7ab435e8bb812523200a8b0','1.1.1')
