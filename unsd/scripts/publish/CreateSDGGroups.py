@@ -188,31 +188,6 @@ def process_sdg_information(goal_code=None):
                 goal_properties["tags"] = ','.join([goal_properties["title"],'Open Data', 'Hub'])
                 createGroup(goal_properties)
                 create_groups.append(str(series["goalCode"]))
-                
-                """# Create a dictionary containing the annotations for the current item's target
-                target_properties = dict()
-                
-                # Create a dictionary containing the annotations for the current 
-                # item's indicatorc
-                indicator_properties = dict()
-                indicator_properties["thumbnail"] = thumbnail
-                
-                series_properties = dict()
-                series_properties["title"] = indicator_properties["title"] + ": " + series["seriesDescription"].replace('%','percent')
-                series_properties["layer_title"] = series["seriesDescription"].replace('%','percent').replace(",",' ').replace('/',' ')
-                snippet = series_properties["title"]
-                series_properties["snippet"] = (snippet[:250] + "..") if len(snippet) > 250 else snippet
-                series_properties["description"] = \
-                    "<p><strong>Series " + series["seriesCode"] + ": </strong>" + series["seriesDescription"] + "</p>" + \
-                    indicator_properties["description"] + \
-                    "<p><em>Release Version: " + series["seriesRelease"] + " </em>"
-                    
-                # Initialize the array of tags                                                         
-                series_tags = series["TAGS"]
-                # Extend the array of tags by adding the series-level tags taken from the metadata file (e.g., "poverty")            
-                series_tags.append(series["seriesRelease"])
-                
-                series_properties["tags"] = series_tags """
     except:
         traceback.print_exc()
 
