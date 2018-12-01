@@ -175,6 +175,7 @@ for(g in 2:2)
     
     
     # Create grid of key columns
+    
     geoAreaCodes  <- countryListXY$geoAreaCode
     
     seriesBlock   <- unique(data[, list(goal,
@@ -210,35 +211,80 @@ for(g in 2:2)
      
      
      data.full <- merge(data.full, data.pivot, by = names(data.full)[names(data.full) %in% names(data.pivot)], all.x= TRUE)
-    
+     
+     #===================================================================
+     # Unpivot full table
+     #===================================================================
+     
+     pivot.columns <- c(paste(unique(data[,years]), "Nature", sep = "."),
+                        paste(unique(data[,years]), "source", sep = "."),
+                        paste(unique(data[,years]), "time_detail", sep = "."),
+                        paste(unique(data[,years]), "value", sep = "."))
+     
+     data.full.long <- data.full %>% gather(Year.Variable, Value, pivot.columns)
+     
+     data.full.long <- as.data.table(data.full.long %>% separate(Year.Variable, c("Year", "Variable"), sep = "\\."))
+     
+     data.n <- data.full.long[data.full.long$Variable =="Nature",]
+     setnames(data.n,"Value","Nature")
+     data.n[,Variable := NULL]
+     
+     data.s <- data.full.long[data.full.long$Variable =="source",]
+     setnames(data.s,"Value","source")
+     data.s[,Variable := NULL]
+     
+     data.td <- data.full.long[data.full.long$Variable =="time_detail",]
+     setnames(data.td,"Value","time_detail")
+     data.td[,Variable := NULL]
+     
+     data.v <- data.full.long[data.full.long$Variable =="value",]
+     setnames(data.v,"Value","value")
+     data.v[,Variable := NULL]
+     
+     data.full.long2 <- merge(merge(merge(data.n, data.s),data.td),data.v)
+     
+     data.full.long2[latest.year == Year,isLatestYear := TRUE]
+     data.full.long2[,latest.year := NULL]
+     data.full.long2[,latest.value := NULL]
+     
+     
+     
+     
+     #===================================================================
+     # Rename columns (remove spaces and dots)
+     #===================================================================
+     
+     
+     
+     
 
     #===================================================================
-    # Pivot matrix
+    # write to tab-delimited file
     #===================================================================
-    
-    write.table( data.pivot, 
-                file = paste("country-profiles/data/csv/goal",g,"_pivot.csv", sep=""), 
+
+    write.table( data.pivot,
+                file = paste("country-profiles/data/csv/goal",g,"_pivot.csv", sep=""),
                 append = FALSE,
-                quote = FALSE, 
+                quote = FALSE,
                 sep = "\t",
-                eol = "\n", 
-                na = "", 
-                dec = ".", 
+                eol = "\n",
+                na = "",
+                dec = ".",
                 row.names = FALSE,
-                col.names = TRUE, 
+                col.names = TRUE,
                 fileEncoding = "UTF-8")
-     
-     
-     write.table( data.full,
-                  file = paste("country-profiles/data/csv/goal",g,"_full.csv", sep=""), 
+
+
+     write.table( data.full.long2 ,
+                  file = paste("country-profiles/data/csv/goal",g,"_full_long.csv", sep=""),
                   append = FALSE,
-                  quote = FALSE, 
+                  quote = FALSE,
                   sep = "\t",
-                  eol = "\n", 
-                  na = "", 
-                  dec = ".", 
+                  eol = "\n",
+                  na = "",
+                  dec = ".",
                   row.names = FALSE,
-                  col.names = TRUE, 
+                  col.names = TRUE,
                   fileEncoding = "UTF-8")
       
   }
