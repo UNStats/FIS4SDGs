@@ -97,6 +97,7 @@ for(g in 2:2)
                             "time_detail",
                             "source")]
       colnames(p.data)[colnames(p.data)=="timePeriodStart"] <- "years"
+      
       # Need to select unique records for the case of multi-indicator series:
       p.data <- unique(cbind(p.data, p.x$data$dimensions, p.x$data$attributes))
       p.data$value <- as.numeric(p.data$value)
@@ -247,12 +248,32 @@ for(g in 2:2)
      data.full.long2[,latest.year := NULL]
      data.full.long2[,latest.value := NULL]
      
+     names(data.full.long2)
      
+     setcolorder(data.full.long2, c("goal",
+                                    "target",
+                                    "indicator",
+                                    "series",
+                                    "seriesDescription",
+                                    "X",
+                                    "Y",
+                                    "geoAreaCode",
+                                    "geoAreaName",
+                                    "ISO3CD",
+                                    "Year",
+                                    dimensions,
+                                    "Units",
+                                    "UnitMultiplier",
+                                    "Nature",
+                                    "source",
+                                    "time_detail",
+                                    "value",
+                                    "isLatestYear",
+                                    "N",
+                                    "sliceBlockId",
+                                    "sliceId"
+                                    ))
      
-     
-     #===================================================================
-     # Rename columns (remove spaces and dots)
-     #===================================================================
      
      
      
