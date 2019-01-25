@@ -1,0 +1,3660 @@
+{
+    "release": "2018.Q4.G.02",
+    "country_code": "480",
+    "country_name": "Mauritius",
+    "facts": [
+        [
+            {
+                "goalCode": "1",
+                "goalDesc": "End poverty in all its forms everywhere",
+                "targetCode": "1.1",
+                "targetDesc": "By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day",
+                "indicatorCode": "1.1.1",
+                "indicatorDesc": "Proportion of population below the international poverty line, by sex, age, employment status and geographical location (urban/rural)",
+                "indicatorTier": "1",
+                "seriesCode": "SI_POV_DAY1",
+                "seriesDesc": "Proportion of population below international poverty line (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "0.5",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "0.4",
+                        "year": "2006"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Proportion of population below international poverty line (%)",
+                "fact_text": "The proportion of the population living below the extreme poverty line increased from  <strong>0.4%</strong> in <strong>2006</strong> to <strong>0.5%</strong>  in  <strong>2012</strong>.",
+                "fact_values": [
+                    "0.4%",
+                    "0.5%"
+                ],
+                "fact_years": [
+                    "2006",
+                    "2012"
+                ],
+                "data_years": [
+                    "2012",
+                    "2006"
+                ],
+                "data_values": [
+                    "0.5",
+                    "0.4"
+                ],
+                "data_is_censored": [
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.5,
+                    0.4
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "1",
+                "goalDesc": "End poverty in all its forms everywhere",
+                "targetCode": "1.1",
+                "targetDesc": "By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day",
+                "indicatorCode": "1.1.1",
+                "indicatorDesc": "Proportion of population below the international poverty line, by sex, age, employment status and geographical location (urban/rural)",
+                "indicatorTier": "1",
+                "seriesCode": "SI_POV_EMP1",
+                "seriesDesc": "Employed population below international poverty line, by sex and age (%)",
+                "slice_dimensions": {
+                    "Sex": "BOTHSEX",
+                    "Age": "15+"
+                },
+                "data": [
+                    {
+                        "value": "0.3",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "0.3",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2006"
+                    }
+                ],
+                "text_type": "2",
+                "fact_title": "Employed population below international poverty line, by sex and age (%)",
+                "fact_text": "In <strong>2012</strong>, <strong>0.3% </strong>  of the country's workers and their families were living on less than 1.90 US dollars per person per day",
+                "fact_values": [
+                    "0.3% "
+                ],
+                "fact_years": [
+                    "2012"
+                ],
+                "data_years": [
+                    "2012",
+                    "2006"
+                ],
+                "data_values": [
+                    "0.3",
+                    "0.3"
+                ],
+                "data_is_censored": [
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.3,
+                    0.3
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "1",
+                "goalDesc": "End poverty in all its forms everywhere",
+                "targetCode": "1.2",
+                "targetDesc": "By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions",
+                "indicatorCode": "1.2.1",
+                "indicatorDesc": "Proportion of population living below the national poverty line, by sex and age",
+                "indicatorTier": "1",
+                "seriesCode": "SI_POV_NAHC",
+                "seriesDesc": "Proportion of population living below the national poverty line (%)",
+                "slice_dimensions": {
+                    "Location": "ALLAREA"
+                },
+                "data": [
+                    {
+                        "value": "7.9",
+                        "Location": "ALLAREA",
+                        "year": "2012"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Proportion of population living below the national poverty line (%)",
+                "fact_text": "The proportion of population living below the national poverty line was <strong>7.9%</strong> in <strong>2012</strong>.",
+                "fact_values": [
+                    "7.9%"
+                ],
+                "fact_years": [
+                    "2012"
+                ],
+                "data_years": [
+                    "2012"
+                ],
+                "data_values": [
+                    "7.9"
+                ],
+                "data_is_censored": [
+                    false
+                ],
+                "data_numeric_part": [
+                    7.9
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "2",
+                "goalDesc": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+                "targetCode": "2.1",
+                "targetDesc": "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+                "indicatorCode": "2.1.1",
+                "indicatorDesc": "Prevalence of undernourishment",
+                "indicatorTier": "1",
+                "seriesCode": "SN_ITK_DEFC",
+                "seriesDesc": "Prevalence of undernourishment (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "4.9",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "4.7",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "4.8",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "5.1",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "5.4",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "5.4",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "5.2",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "5.2",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "5",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "5.2",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "5.5",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "5.7",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "6",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "6.3",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "6.6",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "5.2",
+                        "year": "2005"
+                    }
+                ],
+                "text_type": "7",
+                "fact_title": "Prevalence of undernourishment (%)",
+                "fact_text": "The proportion of the population suffering from hunger was <strong> 5.2%</strong>  in <strong> 2015</strong> .",
+                "fact_values": [
+                    "5.2%"
+                ],
+                "fact_years": [
+                    "2015"
+                ],
+                "data_years": [
+                    "2008",
+                    "2009",
+                    "2010",
+                    "2011",
+                    "2012",
+                    "2013",
+                    "2014",
+                    "2015",
+                    "2007",
+                    "2006",
+                    "2004",
+                    "2003",
+                    "2002",
+                    "2001",
+                    "2000",
+                    "2005"
+                ],
+                "data_values": [
+                    "4.9",
+                    "4.7",
+                    "4.8",
+                    "5.1",
+                    "5.4",
+                    "5.4",
+                    "5.2",
+                    "5.2",
+                    "5",
+                    "5.2",
+                    "5.5",
+                    "5.7",
+                    "6",
+                    "6.3",
+                    "6.6",
+                    "5.2"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    4.9,
+                    4.7,
+                    4.8,
+                    5.1,
+                    5.4,
+                    5.4,
+                    5.2,
+                    5.2,
+                    5.0,
+                    5.2,
+                    5.5,
+                    5.7,
+                    6.0,
+                    6.3,
+                    6.6,
+                    5.2
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "3",
+                "goalDesc": "Ensure healthy lives and promote well-being for all at all ages",
+                "targetCode": "3.2",
+                "targetDesc": "By 2030, end preventable deaths of newborns and children under 5 years of age, with all countries aiming to reduce neonatal mortality to at least as low as 12 per 1,000 live births and under-5 mortality to at least as low as 25 per 1,000 live births",
+                "indicatorCode": "3.2.1",
+                "indicatorDesc": "Under-five mortality rate",
+                "indicatorTier": "1",
+                "seriesCode": "SH_DYN_MORT",
+                "seriesDesc": "Under-five mortality rate, by sex (deaths per 1,000 live births)",
+                "slice_dimensions": {
+                    "Sex": "BOTHSEX",
+                    "Age": "<5Y"
+                },
+                "data": [
+                    {
+                        "value": "15.7",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "16.1",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "16",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "17.1",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "16.1",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "18.5",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "15.5",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "15.6",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "13.8",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "14.7",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "14.4",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "13.1",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2017"
+                    },
+                    {
+                        "value": "15",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "15.8",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "15.4",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "14.8",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "14.9",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "14.8",
+                        "Age": "<5Y",
+                        "Sex": "BOTHSEX",
+                        "year": "2012"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Under-five mortality rate, by sex (deaths per 1,000 live births)",
+                "fact_text": "The mortality rate of children under age 5 fell from  <strong>19.0 per 1,000 live births</strong> in <strong>2000</strong> to <strong>13.0 per 1,000 live births</strong>  in  <strong>2017</strong>.",
+                "fact_values": [
+                    "19.0 per 1,000 live births",
+                    "13.0 per 1,000 live births"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2017"
+                ],
+                "data_years": [
+                    "2005",
+                    "2007",
+                    "2006",
+                    "2001",
+                    "2002",
+                    "2000",
+                    "2004",
+                    "2003",
+                    "2016",
+                    "2014",
+                    "2015",
+                    "2017",
+                    "2010",
+                    "2008",
+                    "2009",
+                    "2013",
+                    "2011",
+                    "2012"
+                ],
+                "data_values": [
+                    "15.7",
+                    "16.1",
+                    "16",
+                    "17.1",
+                    "16.1",
+                    "18.5",
+                    "15.5",
+                    "15.6",
+                    "13.8",
+                    "14.7",
+                    "14.4",
+                    "13.1",
+                    "15",
+                    "15.8",
+                    "15.4",
+                    "14.8",
+                    "14.9",
+                    "14.8"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    16.0,
+                    16.0,
+                    16.0,
+                    17.0,
+                    16.0,
+                    19.0,
+                    16.0,
+                    16.0,
+                    14.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    15.0,
+                    16.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "3",
+                "goalDesc": "Ensure healthy lives and promote well-being for all at all ages",
+                "targetCode": "3.1",
+                "targetDesc": "By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000 live births",
+                "indicatorCode": "3.1.1",
+                "indicatorDesc": "Maternal mortality ratio",
+                "indicatorTier": "1",
+                "seriesCode": "SH_STA_MMR",
+                "seriesDesc": "Maternal mortality ratio",
+                "slice_dimensions": {
+                    "Bounds": "MP"
+                },
+                "data": [
+                    {
+                        "value": "40",
+                        "Bounds": "MP",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "43",
+                        "Bounds": "MP",
+                        "year": "1999"
+                    },
+                    {
+                        "value": "48",
+                        "Bounds": "MP",
+                        "year": "1998"
+                    },
+                    {
+                        "value": "52",
+                        "Bounds": "MP",
+                        "year": "1997"
+                    },
+                    {
+                        "value": "36",
+                        "Bounds": "MP",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "37",
+                        "Bounds": "MP",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "38",
+                        "Bounds": "MP",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "35",
+                        "Bounds": "MP",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "39",
+                        "Bounds": "MP",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "76",
+                        "Bounds": "MP",
+                        "year": "1991"
+                    },
+                    {
+                        "value": "81",
+                        "Bounds": "MP",
+                        "year": "1990"
+                    },
+                    {
+                        "value": "60",
+                        "Bounds": "MP",
+                        "year": "1995"
+                    },
+                    {
+                        "value": "68",
+                        "Bounds": "MP",
+                        "year": "1994"
+                    },
+                    {
+                        "value": "74",
+                        "Bounds": "MP",
+                        "year": "1993"
+                    },
+                    {
+                        "value": "82",
+                        "Bounds": "MP",
+                        "year": "1992"
+                    },
+                    {
+                        "value": "50",
+                        "Bounds": "MP",
+                        "year": "1996"
+                    },
+                    {
+                        "value": "53",
+                        "Bounds": "MP",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "54",
+                        "Bounds": "MP",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "52",
+                        "Bounds": "MP",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "46",
+                        "Bounds": "MP",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "45",
+                        "Bounds": "MP",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "42",
+                        "Bounds": "MP",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "59",
+                        "Bounds": "MP",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "54",
+                        "Bounds": "MP",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "54",
+                        "Bounds": "MP",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "51",
+                        "Bounds": "MP",
+                        "year": "2011"
+                    }
+                ],
+                "text_type": "14",
+                "fact_title": "Maternal mortality ratio",
+                "fact_text": "The maternal mortality ratio decreased from <strong>81.0 per 100,000 live births<strong>  in <strong> 1990</strong>  to <strong> 53.0 per 100,000 live births</strong>  in <strong> 2015</strong> .",
+                "fact_values": [
+                    "81.0 per 100,000 live births",
+                    "53.0 per 100,000 live births"
+                ],
+                "fact_years": [
+                    "1990",
+                    "2015"
+                ],
+                "data_years": [
+                    "2000",
+                    "1999",
+                    "1998",
+                    "1997",
+                    "2001",
+                    "2004",
+                    "2003",
+                    "2002",
+                    "2005",
+                    "1991",
+                    "1990",
+                    "1995",
+                    "1994",
+                    "1993",
+                    "1992",
+                    "1996",
+                    "2015",
+                    "2014",
+                    "2009",
+                    "2008",
+                    "2007",
+                    "2006",
+                    "2010",
+                    "2013",
+                    "2012",
+                    "2011"
+                ],
+                "data_values": [
+                    "40",
+                    "43",
+                    "48",
+                    "52",
+                    "36",
+                    "37",
+                    "38",
+                    "35",
+                    "39",
+                    "76",
+                    "81",
+                    "60",
+                    "68",
+                    "74",
+                    "82",
+                    "50",
+                    "53",
+                    "54",
+                    "52",
+                    "46",
+                    "45",
+                    "42",
+                    "59",
+                    "54",
+                    "54",
+                    "51"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    40.0,
+                    43.0,
+                    48.0,
+                    52.0,
+                    36.0,
+                    37.0,
+                    38.0,
+                    35.0,
+                    39.0,
+                    76.0,
+                    81.0,
+                    60.0,
+                    68.0,
+                    74.0,
+                    82.0,
+                    50.0,
+                    53.0,
+                    54.0,
+                    52.0,
+                    46.0,
+                    45.0,
+                    42.0,
+                    59.0,
+                    54.0,
+                    54.0,
+                    51.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "3",
+                "goalDesc": "Ensure healthy lives and promote well-being for all at all ages",
+                "targetCode": "3.4",
+                "targetDesc": "By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being",
+                "indicatorCode": "3.4.1",
+                "indicatorDesc": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease",
+                "indicatorTier": "1",
+                "seriesCode": "SH_DTH_NCOM",
+                "seriesDesc": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease (probability)",
+                "slice_dimensions": {
+                    "Sex": "BOTHSEX",
+                    "Age": "30-70"
+                },
+                "data": [
+                    {
+                        "value": "22.6",
+                        "Age": "30-70",
+                        "Sex": "BOTHSEX",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "22.8",
+                        "Age": "30-70",
+                        "Sex": "BOTHSEX",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "29.7",
+                        "Age": "30-70",
+                        "Sex": "BOTHSEX",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "27.2",
+                        "Age": "30-70",
+                        "Sex": "BOTHSEX",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "24.1",
+                        "Age": "30-70",
+                        "Sex": "BOTHSEX",
+                        "year": "2010"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease (probability)",
+                "fact_text": "The risk of dying between the ages of 30 and 70 from one of four main non-communicable diseases (NCDs) - cardiovascular disease, cancer, diabetes or chronic respiratory disease - fell from  <strong>30.0%</strong> in <strong>2000</strong> to <strong>23.0%</strong>  in  <strong>2016</strong>.",
+                "fact_values": [
+                    "30.0%",
+                    "23.0%"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2015",
+                    "2000",
+                    "2005",
+                    "2010"
+                ],
+                "data_values": [
+                    "22.6",
+                    "22.8",
+                    "29.7",
+                    "27.2",
+                    "24.1"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    23.0,
+                    23.0,
+                    30.0,
+                    27.0,
+                    24.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "4",
+                "goalDesc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+                "targetCode": "4.5",
+                "targetDesc": "By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations",
+                "indicatorCode": "4.5.1",
+                "indicatorDesc": "Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected, as data become available) for all education indicators on this list that can be disaggregated",
+                "indicatorTier": "1",
+                "seriesCode": "SE_GPI_MATACH",
+                "seriesDesc": "Gender parity index for achievement in mathematics, by education level (ratio)",
+                "slice_dimensions": {
+                    "Education level": "PRIMAR"
+                },
+                "data": [
+                    {
+                        "value": "0.93911",
+                        "Education level": "PRIMAR",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "0.94797",
+                        "Education level": "PRIMAR",
+                        "year": "2007"
+                    }
+                ],
+                "text_type": "4",
+                "fact_title": "Gender parity index for achievement in mathematics, by education level (ratio)",
+                "fact_text": "Gender parity index for achievement in mathematics at the end of primary education was <strong>0.95</strong>  in <strong> 2007</strong> , meaning <strong> 95.0</strong>  girls per 100 boys achieved at least a minimum proficiency level in mathematics.",
+                "fact_values": [
+                    "0.95"
+                ],
+                "fact_years": [
+                    "2007"
+                ],
+                "data_years": [
+                    "2000",
+                    "2007"
+                ],
+                "data_values": [
+                    "0.93911",
+                    "0.94797"
+                ],
+                "data_is_censored": [
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.94,
+                    0.95
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "4",
+                "goalDesc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+                "targetCode": "4.5",
+                "targetDesc": "By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples and children in vulnerable situations",
+                "indicatorCode": "4.5.1",
+                "indicatorDesc": "Parity indices (female/male, rural/urban, bottom/top wealth quintile and others such as disability status, indigenous peoples and conflict-affected, as data become available) for all education indicators on this list that can be disaggregated",
+                "indicatorTier": "1",
+                "seriesCode": "SE_GPI_REAACH",
+                "seriesDesc": "Gender parity index for achievement in reading, by education level (ratio)",
+                "slice_dimensions": {
+                    "Education level": "PRIMAR"
+                },
+                "data": [
+                    {
+                        "value": "0.90377",
+                        "Education level": "PRIMAR",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "0.9204",
+                        "Education level": "PRIMAR",
+                        "year": "2006"
+                    }
+                ],
+                "text_type": "4",
+                "fact_title": "Gender parity index for achievement in reading, by education level (ratio)",
+                "fact_text": "Gender parity index for achievement in reading at the end of primary education was <strong>0.92</strong>  in <strong> 2006</strong> , meaning <strong> 92.0</strong>  girls per 100 boys achieved at least a minimum proficiency level in reading.",
+                "fact_values": [
+                    "0.92"
+                ],
+                "fact_years": [
+                    "2006"
+                ],
+                "data_years": [
+                    "2001",
+                    "2006"
+                ],
+                "data_values": [
+                    "0.90377",
+                    "0.9204"
+                ],
+                "data_is_censored": [
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.9,
+                    0.92
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "4",
+                "goalDesc": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+                "targetCode": "4.2",
+                "targetDesc": "By 2030, ensure that all girls and boys have access to quality early childhood development, care and pre-primary education so that they are ready for primary education",
+                "indicatorCode": "4.2.2",
+                "indicatorDesc": "Participation rate in organized learning (one year before the official primary entry age), by sex",
+                "indicatorTier": "1",
+                "seriesCode": "SE_PRE_PARTN",
+                "seriesDesc": "Participation rate in organized learning (one year before the official primary entry age), by sex (%)",
+                "slice_dimensions": {
+                    "Sex": "BOTHSEX"
+                },
+                "data": [
+                    {
+                        "value": "94.04386",
+                        "Sex": "BOTHSEX",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "95.03902",
+                        "Sex": "BOTHSEX",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "94.80449",
+                        "Sex": "BOTHSEX",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "98.22808",
+                        "Sex": "BOTHSEX",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "98.29727",
+                        "Sex": "BOTHSEX",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "90.51206",
+                        "Sex": "BOTHSEX",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "92.24828",
+                        "Sex": "BOTHSEX",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "90.44212",
+                        "Sex": "BOTHSEX",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "88.79502",
+                        "Sex": "BOTHSEX",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "90.96033",
+                        "Sex": "BOTHSEX",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "92.09592",
+                        "Sex": "BOTHSEX",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "94.36582",
+                        "Sex": "BOTHSEX",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "93.69369",
+                        "Sex": "BOTHSEX",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "93.22472",
+                        "Sex": "BOTHSEX",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "81.34552",
+                        "Sex": "BOTHSEX",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "78.07907",
+                        "Sex": "BOTHSEX",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "76.792",
+                        "Sex": "BOTHSEX",
+                        "year": "2000"
+                    }
+                ],
+                "text_type": "2",
+                "fact_title": "Participation rate in organized learning (one year before the official primary entry age), by sex (%)",
+                "fact_text": "In <strong>2016</strong>, <strong>94.0% </strong> of children participated in pre-primary or primary education in the year prior to the official entrance age for primary school",
+                "fact_values": [
+                    "94.0% "
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2015",
+                    "2014",
+                    "2013",
+                    "2012",
+                    "2011",
+                    "2010",
+                    "2009",
+                    "2008",
+                    "2007",
+                    "2006",
+                    "2005",
+                    "2004",
+                    "2003",
+                    "2002",
+                    "2001",
+                    "2000"
+                ],
+                "data_values": [
+                    "94.04386",
+                    "95.03902",
+                    "94.80449",
+                    "98.22808",
+                    "98.29727",
+                    "90.51206",
+                    "92.24828",
+                    "90.44212",
+                    "88.79502",
+                    "90.96033",
+                    "92.09592",
+                    "94.36582",
+                    "93.69369",
+                    "93.22472",
+                    "81.34552",
+                    "78.07907",
+                    "76.792"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    94.0,
+                    95.0,
+                    95.0,
+                    98.0,
+                    98.0,
+                    91.0,
+                    92.0,
+                    90.0,
+                    89.0,
+                    91.0,
+                    92.0,
+                    94.0,
+                    94.0,
+                    93.0,
+                    81.0,
+                    78.0,
+                    77.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "5",
+                "goalDesc": "Achieve gender equality and empower all women and girls",
+                "targetCode": "5.5",
+                "targetDesc": "Ensure women's full and effective participation and equal opportunities for leadership at all levels of decision-making in political, economic and public life",
+                "indicatorCode": "5.5.1",
+                "indicatorDesc": "Proportion of seats held by women in (a)\u00a0national parliaments and (b) local governments",
+                "indicatorTier": "1",
+                "seriesCode": "SG_GEN_PARL",
+                "seriesDesc": "Proportion of seats held by women in national parliaments (% of total number of seats)",
+                "slice_dimensions": {
+                    "Sex": "FEMALE"
+                },
+                "data": [
+                    {
+                        "value": "18.8406",
+                        "Sex": "FEMALE",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "11.5942",
+                        "Sex": "FEMALE",
+                        "year": "2018"
+                    },
+                    {
+                        "value": "11.5942",
+                        "Sex": "FEMALE",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "18.8406",
+                        "Sex": "FEMALE",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "11.5942",
+                        "Sex": "FEMALE",
+                        "year": "2017"
+                    },
+                    {
+                        "value": "11.5942",
+                        "Sex": "FEMALE",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "5.7143",
+                        "Sex": "FEMALE",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "5.7143",
+                        "Sex": "FEMALE",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "5.7143",
+                        "Sex": "FEMALE",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "7.5758",
+                        "Sex": "FEMALE",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "5.7143",
+                        "Sex": "FEMALE",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "5.7143",
+                        "Sex": "FEMALE",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "17.1429",
+                        "Sex": "FEMALE",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "18.8406",
+                        "Sex": "FEMALE",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "18.8406",
+                        "Sex": "FEMALE",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "17.1429",
+                        "Sex": "FEMALE",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "17.1429",
+                        "Sex": "FEMALE",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "17.1429",
+                        "Sex": "FEMALE",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "17.1429",
+                        "Sex": "FEMALE",
+                        "year": "2008"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Proportion of seats held by women in national parliaments (% of total number of seats)",
+                "fact_text": "The proportion of seats held by women in single or lower houses of parliament increased from  <strong>7.6%</strong> in <strong>2000</strong> to <strong>12.0%</strong>  in  <strong>2018</strong>.",
+                "fact_values": [
+                    "7.6%",
+                    "12.0%"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2018"
+                ],
+                "data_years": [
+                    "2013",
+                    "2018",
+                    "2016",
+                    "2014",
+                    "2017",
+                    "2015",
+                    "2004",
+                    "2003",
+                    "2005",
+                    "2000",
+                    "2002",
+                    "2001",
+                    "2010",
+                    "2012",
+                    "2011",
+                    "2007",
+                    "2006",
+                    "2009",
+                    "2008"
+                ],
+                "data_values": [
+                    "18.8406",
+                    "11.5942",
+                    "11.5942",
+                    "18.8406",
+                    "11.5942",
+                    "11.5942",
+                    "5.7143",
+                    "5.7143",
+                    "5.7143",
+                    "7.5758",
+                    "5.7143",
+                    "5.7143",
+                    "17.1429",
+                    "18.8406",
+                    "18.8406",
+                    "17.1429",
+                    "17.1429",
+                    "17.1429",
+                    "17.1429"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    19.0,
+                    12.0,
+                    12.0,
+                    19.0,
+                    12.0,
+                    12.0,
+                    5.7,
+                    5.7,
+                    5.7,
+                    7.6,
+                    5.7,
+                    5.7,
+                    17.0,
+                    19.0,
+                    19.0,
+                    17.0,
+                    17.0,
+                    17.0,
+                    17.0
+                ]
+            }
+        ],
+        [],
+        [],
+        [],
+        [
+            {
+                "goalCode": "7",
+                "goalDesc": "Ensure access to affordable, reliable, sustainable and modern energy for all",
+                "targetCode": "7.1",
+                "targetDesc": "By 2030, ensure universal access to affordable, reliable and modern energy services",
+                "indicatorCode": "7.1.2",
+                "indicatorDesc": "Proportion of population with primary reliance on clean fuels and technology",
+                "indicatorTier": "1",
+                "seriesCode": "EG_EGY_CLEAN",
+                "seriesDesc": "Proportion of population with primary reliance on clean fuels and technology (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "87",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "90",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "93",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "93",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "92",
+                        "year": "2010"
+                    }
+                ],
+                "text_type": "8",
+                "fact_title": "Proportion of population with primary reliance on clean fuels and technology (%)",
+                "fact_text": "In <strong> 2016</strong> , <strong> 93.0% </strong> of the population relied primarily on clean fuels and technology.",
+                "fact_values": [
+                    "93.0% "
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2000",
+                    "2005",
+                    "2015",
+                    "2016",
+                    "2010"
+                ],
+                "data_values": [
+                    "87",
+                    "90",
+                    "93",
+                    "93",
+                    "92"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    87.0,
+                    90.0,
+                    93.0,
+                    93.0,
+                    92.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "7",
+                "goalDesc": "Ensure access to affordable, reliable, sustainable and modern energy for all",
+                "targetCode": "7.1",
+                "targetDesc": "By 2030, ensure universal access to affordable, reliable and modern energy services",
+                "indicatorCode": "7.1.1",
+                "indicatorDesc": "Proportion of population with access to electricity",
+                "indicatorTier": "1",
+                "seriesCode": "EG_ELC_ACCS",
+                "seriesDesc": "Proportion of population with access to electricity, by urban/rural (%)",
+                "slice_dimensions": {
+                    "Location": "ALLAREA"
+                },
+                "data": [
+                    {
+                        "value": "98.92",
+                        "Location": "ALLAREA",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "98.74",
+                        "Location": "ALLAREA",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "98.82",
+                        "Location": "ALLAREA",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "99.00",
+                        "Location": "ALLAREA",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "99.22",
+                        "Location": "ALLAREA",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "99.02",
+                        "Location": "ALLAREA",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "99.40",
+                        "Location": "ALLAREA",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "98.70",
+                        "Location": "ALLAREA",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "98.74",
+                        "Location": "ALLAREA",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "98.63",
+                        "Location": "ALLAREA",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "98.66",
+                        "Location": "ALLAREA",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "98.78",
+                        "Location": "ALLAREA",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "98.63",
+                        "Location": "ALLAREA",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "98.67",
+                        "Location": "ALLAREA",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "99.40",
+                        "Location": "ALLAREA",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "98.61",
+                        "Location": "ALLAREA",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "98.60",
+                        "Location": "ALLAREA",
+                        "year": "2010"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Proportion of population with access to electricity, by urban/rural (%)",
+                "fact_text": "The proportion of the population with access to electricity was <strong>99.0%</strong> in <strong>2016</strong>.",
+                "fact_values": [
+                    "99.0%"
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2004",
+                    "2006",
+                    "2005",
+                    "2000",
+                    "2001",
+                    "2003",
+                    "2002",
+                    "2014",
+                    "2015",
+                    "2012",
+                    "2013",
+                    "2016",
+                    "2008",
+                    "2007",
+                    "2011",
+                    "2009",
+                    "2010"
+                ],
+                "data_values": [
+                    "98.92",
+                    "98.74",
+                    "98.82",
+                    "99.00",
+                    "99.22",
+                    "99.02",
+                    "99.40",
+                    "98.70",
+                    "98.74",
+                    "98.63",
+                    "98.66",
+                    "98.78",
+                    "98.63",
+                    "98.67",
+                    "99.40",
+                    "98.61",
+                    "98.60"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "8",
+                "goalDesc": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
+                "targetCode": "8.1",
+                "targetDesc": "Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries",
+                "indicatorCode": "8.1.1",
+                "indicatorDesc": "Annual growth rate of real GDP per capita",
+                "indicatorTier": "1",
+                "seriesCode": "NY_GDP_PCAP",
+                "seriesDesc": "Annual growth rate of real GDP per capita (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "7.3291",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "3.52644",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "3.2849",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "3.58563",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "3.20233",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "3.30224",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "3.82221",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "4.04836",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "4.92949",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "5.22902",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "4.34488",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "1.2514",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "3.75672",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "5.21069",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "1.02888",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "2.58854",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "2.92207",
+                        "year": "2009"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Annual growth rate of real GDP per capita (%)",
+                "fact_text": "The annual growth rate of real gross domestic product (GDP) per capita declined from  <strong>7.3%</strong> in <strong>2000</strong> to <strong>3.5%</strong>  in  <strong>2016</strong>.",
+                "fact_values": [
+                    "7.3%",
+                    "3.5%"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2016"
+                ],
+                "data_years": [
+                    "2000",
+                    "2016",
+                    "2015",
+                    "2014",
+                    "2013",
+                    "2012",
+                    "2011",
+                    "2010",
+                    "2008",
+                    "2007",
+                    "2006",
+                    "2005",
+                    "2004",
+                    "2003",
+                    "2002",
+                    "2001",
+                    "2009"
+                ],
+                "data_values": [
+                    "7.3291",
+                    "3.52644",
+                    "3.2849",
+                    "3.58563",
+                    "3.20233",
+                    "3.30224",
+                    "3.82221",
+                    "4.04836",
+                    "4.92949",
+                    "5.22902",
+                    "4.34488",
+                    "1.2514",
+                    "3.75672",
+                    "5.21069",
+                    "1.02888",
+                    "2.58854",
+                    "2.92207"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    7.3,
+                    3.5,
+                    3.3,
+                    3.6,
+                    3.2,
+                    3.3,
+                    3.8,
+                    4.0,
+                    4.9,
+                    5.2,
+                    4.3,
+                    1.3,
+                    3.8,
+                    5.2,
+                    1.0,
+                    2.6,
+                    2.9
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "8",
+                "goalDesc": "Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all",
+                "targetCode": "8.5",
+                "targetDesc": "By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value",
+                "indicatorCode": "8.5.2",
+                "indicatorDesc": "Unemployment rate, by sex, age and persons with disabilities",
+                "indicatorTier": "1",
+                "seriesCode": "SL_TLF_UEM",
+                "seriesDesc": "Unemployment rate, by sex and age (%)",
+                "slice_dimensions": {
+                    "Sex": "BOTHSEX",
+                    "Age": "15+"
+                },
+                "data": [
+                    {
+                        "value": "8.8",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "6.8",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "8.49",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "7.2",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "7.7",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "7.22",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "7.49",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "8.53",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "9.62",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "9.14",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "7.72",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "8",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "7.92",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "7.91",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "7.69",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "8.15",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "7.3",
+                        "Age": "15+",
+                        "Sex": "BOTHSEX",
+                        "year": "2016"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Unemployment rate, by sex and age (%)",
+                "fact_text": "The total unemployment rate declined from  <strong>8.8%</strong> in <strong>2000</strong> to <strong>7.3%</strong>  in  <strong>2016</strong>.",
+                "fact_values": [
+                    "8.8%",
+                    "7.3%"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2016"
+                ],
+                "data_years": [
+                    "2000",
+                    "2001",
+                    "2004",
+                    "2002",
+                    "2003",
+                    "2008",
+                    "2009",
+                    "2007",
+                    "2005",
+                    "2006",
+                    "2014",
+                    "2013",
+                    "2015",
+                    "2011",
+                    "2010",
+                    "2012",
+                    "2016"
+                ],
+                "data_values": [
+                    "8.8",
+                    "6.8",
+                    "8.49",
+                    "7.2",
+                    "7.7",
+                    "7.22",
+                    "7.49",
+                    "8.53",
+                    "9.62",
+                    "9.14",
+                    "7.72",
+                    "8",
+                    "7.92",
+                    "7.91",
+                    "7.69",
+                    "8.15",
+                    "7.3"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    8.8,
+                    6.8,
+                    8.5,
+                    7.2,
+                    7.7,
+                    7.2,
+                    7.5,
+                    8.5,
+                    9.6,
+                    9.1,
+                    7.7,
+                    8.0,
+                    7.9,
+                    7.9,
+                    7.7,
+                    8.2,
+                    7.3
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "9",
+                "goalDesc": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+                "targetCode": "9.4",
+                "targetDesc": "By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, with all countries taking action in accordance with their respective capabilities",
+                "indicatorCode": "9.4.1",
+                "indicatorDesc": "CO2 emission per unit of value added",
+                "indicatorTier": "1",
+                "seriesCode": "EN_ATM_CO2GDP",
+                "seriesDesc": "Carbon dioxide emissions per unit of GDP (kilogrammes of CO2 per constant 2010 United States dollars)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "0.19781",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "0.17987",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "0.20076",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "0.18141",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "0.19286",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "0.17369",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "0.19835",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "0.17933",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "0.20771",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "0.18695",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "0.20187",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "0.19559",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "0.19135",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "0.18294",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "0.20207",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "0.1916",
+                        "year": "2010"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Carbon dioxide emissions per unit of GDP (kilogrammes of CO2 per constant 2010 United States dollars)",
+                "fact_text": "The carbon dioxide emissions per unit of GDP decreased from  <strong>0.19 kilograms</strong> in <strong>2000</strong> to <strong>0.17 kilograms</strong>  in  <strong>2015</strong>.",
+                "fact_values": [
+                    "0.19 kilograms",
+                    "0.17 kilograms"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2015"
+                ],
+                "data_years": [
+                    "2002",
+                    "2013",
+                    "2003",
+                    "2012",
+                    "2000",
+                    "2015",
+                    "2001",
+                    "2014",
+                    "2006",
+                    "2009",
+                    "2007",
+                    "2008",
+                    "2004",
+                    "2011",
+                    "2005",
+                    "2010"
+                ],
+                "data_values": [
+                    "0.19781",
+                    "0.17987",
+                    "0.20076",
+                    "0.18141",
+                    "0.19286",
+                    "0.17369",
+                    "0.19835",
+                    "0.17933",
+                    "0.20771",
+                    "0.18695",
+                    "0.20187",
+                    "0.19559",
+                    "0.19135",
+                    "0.18294",
+                    "0.20207",
+                    "0.1916"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.2,
+                    0.18,
+                    0.2,
+                    0.18,
+                    0.19,
+                    0.17,
+                    0.2,
+                    0.18,
+                    0.21,
+                    0.19,
+                    0.2,
+                    0.2,
+                    0.19,
+                    0.18,
+                    0.2,
+                    0.19
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "9",
+                "goalDesc": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+                "targetCode": "9.5",
+                "targetDesc": "Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending",
+                "indicatorCode": "9.5.1",
+                "indicatorDesc": "Research and development expenditure as a proportion of GDP",
+                "indicatorTier": "1",
+                "seriesCode": "GB_XPD_RSDV",
+                "seriesDesc": "Research and development expenditure as a proportion of GDP (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "0.18",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "0.37",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "0.38",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "0.34",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "0.37",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "0.37",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "0.29",
+                        "year": "2000"
+                    }
+                ],
+                "text_type": "9",
+                "fact_title": "Research and development expenditure as a proportion of GDP (%)",
+                "fact_text": "In <strong> 2012</strong> , investment in research and development (R&D) stood at <strong> 0.18% of GDP</strong> , a decline from <strong> 0.29</strong> % in <strong> 2000</strong> ",
+                "fact_values": [
+                    "0.29% of GDP",
+                    "0.18% of GDP"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2012"
+                ],
+                "data_years": [
+                    "2012",
+                    "2005",
+                    "2004",
+                    "2003",
+                    "2002",
+                    "2001",
+                    "2000"
+                ],
+                "data_values": [
+                    "0.18",
+                    "0.37",
+                    "0.38",
+                    "0.34",
+                    "0.37",
+                    "0.37",
+                    "0.29"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.18,
+                    0.37,
+                    0.38,
+                    0.34,
+                    0.37,
+                    0.37,
+                    0.29
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "9",
+                "goalDesc": "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+                "targetCode": "9.c",
+                "targetDesc": "Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries by 2020",
+                "indicatorCode": "9.c.1",
+                "indicatorDesc": "Proportion of population covered by a mobile network, by technology",
+                "indicatorTier": "1",
+                "seriesCode": "IT_MOB_NTWK",
+                "seriesDesc": "Proportion of population covered by a mobile network, by technology (%)",
+                "slice_dimensions": {
+                    "Type of mobile technology": "AL2G"
+                },
+                "data": [
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "99.8",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "99.7",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "99.8",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "95",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "96",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "99.8",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "99.8",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "99",
+                        "Type of mobile technology": "AL2G",
+                        "year": "2015"
+                    }
+                ],
+                "text_type": "2",
+                "fact_title": "Proportion of population covered by a mobile network, by technology (%)",
+                "fact_text": "In <strong>2016</strong>, <strong>99.0% </strong> of the population was in range of at least a second-generation (2G) cellular signal",
+                "fact_values": [
+                    "99.0% "
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2001",
+                    "2000",
+                    "2002",
+                    "2003",
+                    "2004",
+                    "2014",
+                    "2013",
+                    "2012",
+                    "2011",
+                    "2010",
+                    "2009",
+                    "2008",
+                    "2007",
+                    "2006",
+                    "2005",
+                    "2015"
+                ],
+                "data_values": [
+                    "99",
+                    "99.8",
+                    "99.7",
+                    "99.8",
+                    "95",
+                    "96",
+                    "99",
+                    "99",
+                    "99",
+                    "99",
+                    "99",
+                    "99",
+                    "99",
+                    "99",
+                    "99.8",
+                    "99.8",
+                    "99"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    99.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    95.0,
+                    96.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    99.0,
+                    100.0,
+                    100.0,
+                    99.0
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "11",
+                "goalDesc": "Make cities and human settlements inclusive, safe, resilient and sustainable",
+                "targetCode": "11.6",
+                "targetDesc": "By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management",
+                "indicatorCode": "11.6.2",
+                "indicatorDesc": "Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)",
+                "indicatorTier": "1",
+                "seriesCode": "EN_ATM_PM25",
+                "seriesDesc": "Annual mean levels of fine particulate matter in cities, urban population (micrograms per cubic meter)",
+                "slice_dimensions": {
+                    "Location": "ALLAREA"
+                },
+                "data": [
+                    {
+                        "value": "13.5398015975952",
+                        "Location": "ALLAREA",
+                        "year": "2016"
+                    }
+                ],
+                "text_type": "10",
+                "fact_title": "Annual mean levels of fine particulate matter in cities, urban population (micrograms per cubic meter)",
+                "fact_text": "In <strong> 2016</strong> , the annual population-weighted average mean concentration of fine suspended particles of less than 2.5 microns in diameters (PM2.5) was about <strong> 14.0 micrograms per cubic metre</strong> .  This is above the maximum level for safety set by WHO of 10 micrograms per cubic metre.",
+                "fact_values": [
+                    "14.0 micrograms per cubic metre"
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2016"
+                ],
+                "data_values": [
+                    "13.5398015975952"
+                ],
+                "data_is_censored": [
+                    false
+                ],
+                "data_numeric_part": [
+                    14.0
+                ]
+            }
+        ],
+        [],
+        [],
+        [
+            {
+                "goalCode": "13",
+                "goalDesc": "Take urgent action to combat climate change and its impacts",
+                "targetCode": "13.1",
+                "targetDesc": "Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries",
+                "indicatorCode": "13.1.2",
+                "indicatorDesc": "Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015-2030",
+                "indicatorTier": "1",
+                "seriesCode": "SG_DSR_LEGREG",
+                "seriesDesc": "Countries with legislative and/or regulatory provisions been made for managing disaster risk (1 = YES; 0 = NO)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "1",
+                        "year": "2015"
+                    }
+                ],
+                "text_type": "12",
+                "fact_title": "Countries with legislative and/or regulatory provisions been made for managing disaster risk (1 = YES; 0 = NO)",
+                "fact_text": "As of <strong> 2015</strong> , Mauritius has developed national and local disaster reduction strategies.",
+                "fact_values": [
+                    "1.0"
+                ],
+                "fact_years": [
+                    "2015"
+                ],
+                "data_years": [
+                    "2015"
+                ],
+                "data_values": [
+                    "1"
+                ],
+                "data_is_censored": [
+                    false
+                ],
+                "data_numeric_part": [
+                    1.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "14",
+                "goalDesc": "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
+                "targetCode": "14.5",
+                "targetDesc": "By 2020, conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on the best available scientific information",
+                "indicatorCode": "14.5.1",
+                "indicatorDesc": "Coverage of protected areas in relation to marine areas",
+                "indicatorTier": "1",
+                "seriesCode": "ER_MRN_MARIN",
+                "seriesDesc": "Coverage of protected areas in relation to marine areas (Exclusive Economic Zones) (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "0.00388",
+                        "year": "2017"
+                    }
+                ],
+                "text_type": "8",
+                "fact_title": "Coverage of protected areas in relation to marine areas (Exclusive Economic Zones) (%)",
+                "fact_text": "In <strong> 2017</strong> , <strong> 0.0% </strong> of the marine environment under national jurisdiction (up to 200 nautical miles from shore) was under protection.",
+                "fact_values": [
+                    "0.0% "
+                ],
+                "fact_years": [
+                    "2017"
+                ],
+                "data_years": [
+                    "2017"
+                ],
+                "data_values": [
+                    "0.00388"
+                ],
+                "data_is_censored": [
+                    false
+                ],
+                "data_numeric_part": [
+                    0.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "15",
+                "goalDesc": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+                "targetCode": "15.1",
+                "targetDesc": "By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements",
+                "indicatorCode": "15.1.1",
+                "indicatorDesc": "Forest area as a proportion of total land area",
+                "indicatorTier": "1",
+                "seriesCode": "AG_LND_FRST",
+                "seriesDesc": "Forest area as a proportion of total land area (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "19.01",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "18.92",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "18.82",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "20.64",
+                        "year": "2000"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Forest area as a proportion of total land area (%)",
+                "fact_text": "Land area covered by forest declined from  <strong>21.0%</strong> in <strong>2000</strong> to <strong>19.0%</strong>  in  <strong>2015</strong>.",
+                "fact_values": [
+                    "21.0%",
+                    "19.0%"
+                ],
+                "fact_years": [
+                    "2000",
+                    "2015"
+                ],
+                "data_years": [
+                    "2015",
+                    "2010",
+                    "2005",
+                    "2000"
+                ],
+                "data_values": [
+                    "19.01",
+                    "18.92",
+                    "18.82",
+                    "20.64"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    19.0,
+                    19.0,
+                    19.0,
+                    21.0
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "15",
+                "goalDesc": "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+                "targetCode": "15.1",
+                "targetDesc": "By 2020, ensure the conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements",
+                "indicatorCode": "15.1.2",
+                "indicatorDesc": "Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas, by ecosystem type",
+                "indicatorTier": "1",
+                "seriesCode": "ER_PTD_TERRS",
+                "seriesDesc": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+                "slice_dimensions": {
+                    "Bounds": "MP"
+                },
+                "data": [
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2017"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2018"
+                    },
+                    {
+                        "value": "9.49422",
+                        "Bounds": "MP",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "9.57494",
+                        "Bounds": "MP",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "9.57494",
+                        "Bounds": "MP",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "9.57494",
+                        "Bounds": "MP",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "9.57494",
+                        "Bounds": "MP",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "10.3878",
+                        "Bounds": "MP",
+                        "year": "2012"
+                    }
+                ],
+                "text_type": "7",
+                "fact_title": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+                "fact_text": "The average proportion of terrestrial key biodiversity areas (KBAs) covered by protected areas was <strong> 10.0%</strong>  in <strong> 2018</strong> .",
+                "fact_values": [
+                    "10.0%"
+                ],
+                "fact_years": [
+                    "2018"
+                ],
+                "data_years": [
+                    "2000",
+                    "2001",
+                    "2002",
+                    "2003",
+                    "2004",
+                    "2005",
+                    "2013",
+                    "2014",
+                    "2015",
+                    "2016",
+                    "2017",
+                    "2018",
+                    "2006",
+                    "2007",
+                    "2008",
+                    "2009",
+                    "2010",
+                    "2011",
+                    "2012"
+                ],
+                "data_values": [
+                    "9.49422",
+                    "9.49422",
+                    "9.49422",
+                    "9.49422",
+                    "9.49422",
+                    "9.49422",
+                    "10.3878",
+                    "10.3878",
+                    "10.3878",
+                    "10.3878",
+                    "10.3878",
+                    "10.3878",
+                    "9.49422",
+                    "9.57494",
+                    "9.57494",
+                    "9.57494",
+                    "9.57494",
+                    "10.3878",
+                    "10.3878"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    9.5,
+                    9.5,
+                    9.5,
+                    9.5,
+                    9.5,
+                    9.5,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    9.5,
+                    9.6,
+                    9.6,
+                    9.6,
+                    9.6,
+                    10.0,
+                    10.0
+                ]
+            }
+        ],
+        [],
+        [
+            {
+                "goalCode": "16",
+                "goalDesc": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",
+                "targetCode": "16.1",
+                "targetDesc": "Significantly reduce all forms of violence and related death rates everywhere",
+                "indicatorCode": "16.1.1",
+                "indicatorDesc": "Number of victims of intentional homicide per 100,000 population, by sex and age",
+                "indicatorTier": "1",
+                "seriesCode": "VC_IHR_PSRC",
+                "seriesDesc": "Number of victims of intentional homicide per 100,000 population (victims per 100,000 population)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "1.82",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "1.67",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "1.51",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "2.31",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "2.72",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "2.64",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "2.79",
+                        "year": "2013"
+                    }
+                ],
+                "text_type": "11",
+                "fact_title": "Number of victims of intentional homicide per 100,000 population (victims per 100,000 population)",
+                "fact_text": "In <strong> 2016</strong> , the intentional homicide rate was <strong> 1.8 per 100,000 population</strong> . ",
+                "fact_values": [
+                    "1.8 per 100,000 population"
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2015",
+                    "2014",
+                    "2012",
+                    "2011",
+                    "2010",
+                    "2013"
+                ],
+                "data_values": [
+                    "1.82",
+                    "1.67",
+                    "1.51",
+                    "2.31",
+                    "2.72",
+                    "2.64",
+                    "2.79"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    1.8,
+                    1.7,
+                    1.5,
+                    2.3,
+                    2.7,
+                    2.6,
+                    2.8
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "17",
+                "goalDesc": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+                "targetCode": "17.4",
+                "targetDesc": "Assist developing countries in attaining long-term debt sustainability through coordinated policies aimed at fostering debt financing, debt relief and debt restructuring, as appropriate, and address the external debt of highly indebted poor countries to reduce debt distress",
+                "indicatorCode": "17.4.1",
+                "indicatorDesc": "Debt service as a proportion of exports of goods and services",
+                "indicatorTier": "1",
+                "seriesCode": "DT_TDS_DECT",
+                "seriesDesc": "Debt service as a proportion of exports of goods and services (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "16.38",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "6.53",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "7.92",
+                        "year": "1992"
+                    },
+                    {
+                        "value": "1.20",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "1.04",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "5.44",
+                        "year": "1993"
+                    },
+                    {
+                        "value": "1.01",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "4.72",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "7.26",
+                        "year": "1990"
+                    },
+                    {
+                        "value": "7.08",
+                        "year": "1991"
+                    },
+                    {
+                        "value": "6.81",
+                        "year": "1997"
+                    },
+                    {
+                        "value": "2.37",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "2.27",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "5.29",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "5.62",
+                        "year": "1999"
+                    },
+                    {
+                        "value": "5.36",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "6.73",
+                        "year": "1998"
+                    },
+                    {
+                        "value": "2.55",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "1.05",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "5.98",
+                        "year": "1995"
+                    },
+                    {
+                        "value": "5.28",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "5.73",
+                        "year": "1994"
+                    },
+                    {
+                        "value": "0.70",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "5.12",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "4.95",
+                        "year": "1996"
+                    },
+                    {
+                        "value": "0.85",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "1.34",
+                        "year": "2011"
+                    }
+                ],
+                "text_type": "1",
+                "fact_title": "Debt service as a proportion of exports of goods and services (%)",
+                "fact_text": "Debt service as a proportion of exports of goods and services was <strong>1.2%</strong> in <strong>2016</strong>.",
+                "fact_values": [
+                    "1.2%"
+                ],
+                "fact_years": [
+                    "2016"
+                ],
+                "data_years": [
+                    "2000",
+                    "2002",
+                    "1992",
+                    "2016",
+                    "2014",
+                    "1993",
+                    "2015",
+                    "2001",
+                    "1990",
+                    "1991",
+                    "1997",
+                    "2008",
+                    "2009",
+                    "2004",
+                    "1999",
+                    "2006",
+                    "1998",
+                    "2007",
+                    "2012",
+                    "1995",
+                    "2005",
+                    "1994",
+                    "2013",
+                    "2003",
+                    "1996",
+                    "2010",
+                    "2011"
+                ],
+                "data_values": [
+                    "16.38",
+                    "6.53",
+                    "7.92",
+                    "1.20",
+                    "1.04",
+                    "5.44",
+                    "1.01",
+                    "4.72",
+                    "7.26",
+                    "7.08",
+                    "6.81",
+                    "2.37",
+                    "2.27",
+                    "5.29",
+                    "5.62",
+                    "5.36",
+                    "6.73",
+                    "2.55",
+                    "1.05",
+                    "5.98",
+                    "5.28",
+                    "5.73",
+                    "0.70",
+                    "5.12",
+                    "4.95",
+                    "0.85",
+                    "1.34"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    16.0,
+                    6.5,
+                    7.9,
+                    1.2,
+                    1.0,
+                    5.4,
+                    1.0,
+                    4.7,
+                    7.3,
+                    7.1,
+                    6.8,
+                    2.4,
+                    2.3,
+                    5.3,
+                    5.6,
+                    5.4,
+                    6.7,
+                    2.6,
+                    1.1,
+                    6.0,
+                    5.3,
+                    5.7,
+                    0.7,
+                    5.1,
+                    5.0,
+                    0.85,
+                    1.3
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "17",
+                "goalDesc": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+                "targetCode": "17.6",
+                "targetDesc": "Enhance North-South, South-South and triangular regional and international cooperation on and access to science, technology and innovation and enhance knowledge-sharing on mutually agreed terms, including through improved coordination among existing mechanisms, in particular at the United Nations level, and through a global technology facilitation mechanism",
+                "indicatorCode": "17.6.2",
+                "indicatorDesc": "Fixed Internet broadband subscriptions per 100\u00a0inhabitants, by speed",
+                "indicatorTier": "1",
+                "seriesCode": "IT_NET_BBP",
+                "seriesDesc": "Fixed Internet broadband subscriptions per 100\u00a0inhabitants, by speed (per 100 inhabitants)",
+                "slice_dimensions": {
+                    "Type of speed": "ANYS"
+                },
+                "data": [
+                    {
+                        "value": "16.84451",
+                        "Type of speed": "ANYS",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "11.358896767151490000",
+                        "Type of speed": "ANYS",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "9.574381938764768000",
+                        "Type of speed": "ANYS",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "13.050434626081744000",
+                        "Type of speed": "ANYS",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "7.63184602720981250",
+                        "Type of speed": "ANYS",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "5.940052541445876000",
+                        "Type of speed": "ANYS",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "4.2924429592524050000",
+                        "Type of speed": "ANYS",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "14.5698958732771310000",
+                        "Type of speed": "ANYS",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "15.746888314357030000",
+                        "Type of speed": "ANYS",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "2.87972878154980100",
+                        "Type of speed": "ANYS",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "2.29301991421417500",
+                        "Type of speed": "ANYS",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "0.44510336820718494000",
+                        "Type of speed": "ANYS",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "0.21213698224386984000",
+                        "Type of speed": "ANYS",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "0.098325722224851990",
+                        "Type of speed": "ANYS",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "0.0237703632778747",
+                        "Type of speed": "ANYS",
+                        "year": "2002"
+                    }
+                ],
+                "text_type": "15",
+                "fact_title": "Fixed Internet broadband subscriptions per 100\u00a0inhabitants, by speed (per 100 inhabitants)",
+                "fact_text": "In <strong> 2016</strong> , fixed-broadband internet penetration reached <strong> 17.0</strong> % of the population, up from 0.02% of the population in <strong> 2002</strong> .",
+                "fact_values": [
+                    "0.02% of the population",
+                    "17.0% of the population"
+                ],
+                "fact_years": [
+                    "2002",
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2012",
+                    "2011",
+                    "2013",
+                    "2010",
+                    "2009",
+                    "2008",
+                    "2014",
+                    "2015",
+                    "2007",
+                    "2006",
+                    "2005",
+                    "2004",
+                    "2003",
+                    "2002"
+                ],
+                "data_values": [
+                    "16.84451",
+                    "11.358896767151490000",
+                    "9.574381938764768000",
+                    "13.050434626081744000",
+                    "7.63184602720981250",
+                    "5.940052541445876000",
+                    "4.2924429592524050000",
+                    "14.5698958732771310000",
+                    "15.746888314357030000",
+                    "2.87972878154980100",
+                    "2.29301991421417500",
+                    "0.44510336820718494000",
+                    "0.21213698224386984000",
+                    "0.098325722224851990",
+                    "0.0237703632778747"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    17.0,
+                    11.0,
+                    9.6,
+                    13.0,
+                    7.6,
+                    5.9,
+                    4.3,
+                    15.0,
+                    16.0,
+                    2.9,
+                    2.3,
+                    0.45,
+                    0.21,
+                    0.1,
+                    0.02
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "17",
+                "goalDesc": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+                "targetCode": "17.18",
+                "targetDesc": "By 2020, enhance capacity-building support to developing countries, including for least developed countries and small island developing States, to increase significantly the availability of high-quality, timely and reliable data disaggregated by income, gender, age, race, ethnicity, migratory status, disability, geographic location and other characteristics relevant in national contexts",
+                "indicatorCode": "17.18.3",
+                "indicatorDesc": "Number of countries with a national statistical plan that is fully funded and under implementation, by source of funding",
+                "indicatorTier": "1",
+                "seriesCode": "SG_STT_NSDSFND",
+                "seriesDesc": "Countries with national statistical plans that are fully funded (1 = YES; 0 = NO)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "1",
+                        "year": "2017"
+                    }
+                ],
+                "text_type": "12",
+                "fact_title": "Countries with national statistical plans that are fully funded (1 = YES; 0 = NO)",
+                "fact_text": "As of <strong> 2017</strong> , Mauritius has developed national statistical plans that are fully funded.",
+                "fact_values": [
+                    "1.0"
+                ],
+                "fact_years": [
+                    "2017"
+                ],
+                "data_years": [
+                    "2017"
+                ],
+                "data_values": [
+                    "1"
+                ],
+                "data_is_censored": [
+                    false
+                ],
+                "data_numeric_part": [
+                    1.0
+                ]
+            }
+        ],
+        [
+            {
+                "goalCode": "17",
+                "goalDesc": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development",
+                "targetCode": "17.3",
+                "targetDesc": "Mobilize additional financial resources for developing countries from multiple sources",
+                "indicatorCode": "17.3.2",
+                "indicatorDesc": "Volume of remittances (in United States dollars) as a proportion of total GDP",
+                "indicatorTier": "1",
+                "seriesCode": "BX_TRF_PWKR",
+                "seriesDesc": "Volume of remittances (in United States dollars) as a proportion of total GDP (%)",
+                "slice_dimensions": {},
+                "data": [
+                    {
+                        "value": "0.01",
+                        "year": "2016"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2007"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2012"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2010"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2014"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2015"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2008"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2009"
+                    },
+                    {
+                        "value": "0.00",
+                        "year": "2013"
+                    },
+                    {
+                        "value": "0.00",
+                        "year": "2011"
+                    },
+                    {
+                        "value": "3.32",
+                        "year": "1994"
+                    },
+                    {
+                        "value": "3.27",
+                        "year": "1995"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2003"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2002"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2006"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2004"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2005"
+                    },
+                    {
+                        "value": "4.01",
+                        "year": "1997"
+                    },
+                    {
+                        "value": "4.32",
+                        "year": "1998"
+                    },
+                    {
+                        "value": "3.62",
+                        "year": "1996"
+                    },
+                    {
+                        "value": "3.86",
+                        "year": "2000"
+                    },
+                    {
+                        "value": "0.01",
+                        "year": "2001"
+                    },
+                    {
+                        "value": "4.15",
+                        "year": "1999"
+                    }
+                ],
+                "text_type": "9",
+                "fact_title": "Volume of remittances (in United States dollars) as a proportion of total GDP (%)",
+                "fact_text": "In <strong> 2016</strong> , the inflow of personal remittances was <strong> 0.01% of GDP</strong> , down from <strong> 3.3</strong> % in <strong> 1994</strong> ",
+                "fact_values": [
+                    "3.3% of GDP",
+                    "0.01% of GDP"
+                ],
+                "fact_years": [
+                    "1994",
+                    "2016"
+                ],
+                "data_years": [
+                    "2016",
+                    "2007",
+                    "2012",
+                    "2010",
+                    "2014",
+                    "2015",
+                    "2008",
+                    "2009",
+                    "2013",
+                    "2011",
+                    "1994",
+                    "1995",
+                    "2003",
+                    "2002",
+                    "2006",
+                    "2004",
+                    "2005",
+                    "1997",
+                    "1998",
+                    "1996",
+                    "2000",
+                    "2001",
+                    "1999"
+                ],
+                "data_values": [
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.00",
+                    "0.00",
+                    "3.32",
+                    "3.27",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "0.01",
+                    "4.01",
+                    "4.32",
+                    "3.62",
+                    "3.86",
+                    "0.01",
+                    "4.15"
+                ],
+                "data_is_censored": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false
+                ],
+                "data_numeric_part": [
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.0,
+                    0.0,
+                    3.3,
+                    3.3,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    0.01,
+                    4.0,
+                    4.3,
+                    3.6,
+                    3.9,
+                    0.01,
+                    4.2
+                ]
+            }
+        ]
+    ]
+}

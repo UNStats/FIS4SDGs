@@ -3,6 +3,7 @@
 library(jsonlite)
 library(tidyr)
 library(data.table)
+library(rapportools)
 
 
 setwd("C:/Users/L.GonzalezMorales/Documents/GitHub/FIS4SDGs/unsd")
@@ -59,10 +60,20 @@ readPage <- function(queryString) {
   return(out)
 }
 
+
+
+camel <- function(x){ #function for camel case
+  capit <- function(x) paste0(toupper(substring(x, 1, 1)), substring(x, 2, nchar(x)))
+  sapply(strsplit(x, "\\."), function(x) paste(capit(x), collapse=""))
+  sapply(strsplit(x, " "), function(x) paste(capit(x), collapse=""))
+  sapply(strsplit(x, "_"), function(x) paste(capit(x), collapse=""))
+}
+
+
 #------------------------------------------------------------------------------
 # Pull data for each series
 #------------------------------------------------------------------------------
-for(g in 2:2)
+for(g in 1:1)
   #for(i in 1:nSeries)
 {
 
@@ -277,8 +288,13 @@ for(g in 2:2)
      
      
      
+    #===================================================================
+    # Convert column titles to CamelCase
+    #===================================================================
      
-
+    setnames(data.full.long2,names(data.full.long2),tocamel(names(data.full.long2), upper = TRUE))
+    names(data.full.long2)
+    
     #===================================================================
     # write to tab-delimited file
     #===================================================================
@@ -298,6 +314,19 @@ for(g in 2:2)
 
      write.table( data.full.long2 ,
                   file = paste("country-profiles/data/csv/goal",g,"_full_long.csv", sep=""),
+                  append = FALSE,
+                  quote = FALSE,
+                  sep = "\t",
+                  eol = "\n",
+                  na = "",
+                  dec = ".",
+                  row.names = FALSE,
+                  col.names = TRUE,
+                  fileEncoding = "UTF-8")
+     
+     
+     write.table( data.full.long2[!is.na(data.full.long2$Value),] ,
+                  file = paste("country-profiles/data/csv/goal",g,"_dense_long.csv", sep=""),
                   append = FALSE,
                   quote = FALSE,
                   sep = "\t",
