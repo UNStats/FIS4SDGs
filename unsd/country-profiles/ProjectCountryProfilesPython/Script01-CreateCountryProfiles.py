@@ -5,8 +5,11 @@ import urllib
 import re
 import statistics
 import math
-#--------------------------------------------------------------------        
+import os
+#--------------------------------------------------------------------       
 
+os.chdir('C:\\Users\\L.GonzalezMorales\\Documents\\GitHub\\FIS4SDGs\\unsd\\country-profiles\\ProjectCountryProfilesPython\\') 
+           
 release = '2018.Q4.G.02' # Make sure to have the correct release here
 
 #-----------------------------------------
@@ -25,19 +28,6 @@ def round_KFM(x, n):
     
 #print(round_KFM(3.5023,2))
 
-#-----------------------------------------
-
-# The parseTree function iterates through the tree and creates a flat array of countries
-def parseTree(obj):
-    if (obj['type'] == 'Country'):
-        #print(obj['geoAreaName'], '(C)')
-        countryArray.append(obj)
-    else:
-        #print(obj['geoAreaName'], '(R)')
-        if (obj['children'] is not None):
-            for child in obj['children']:
-                parseTree(child)
-
 
 #-----------------------------------------
 # READ FACT BUILDER CONDITIONS
@@ -55,35 +45,14 @@ print(fact_builder[1])
 # CREATE LIST OF COUNTRIES
 #-----------------------------------------
 
-# Start by creating a PoolManager() object using urllib3. 
-http = urllib3.PoolManager()
 
-# Make a GET request to the SDG API using the http object just created
-geoAreas = http.request('GET', 'https://unstats.un.org/SDGAPI/v1/sdg/GeoArea/Tree')
-geoAreas_tree = json.loads(geoAreas.data.decode('UTF-8'))
-
-# The geoAreas response contains multiple trees.  Take the first one, 
-# Which organizes countries by geographic region:
-world_tree = geoAreas_tree[0]
-
-#print(world_tree['geoAreaName'])
-#for x in world_tree['children']:
-#    print("-"*10)
-#    print(x)
-
-
-# The parseTree function iterates through the tree and creates a flat array of
-# countries:
-
-global countryArray
 countryArray = []
-
-for area in world_tree['children']:
-    parseTree(area)
-
-#print(countryArray)
-#for country in countryArray:
-#    print(country['geoAreaCode'], " - ", country['geoAreaName'])
+with open('CountryListXY.txt', newline = '') as countryListXY:                                                                                          
+    countryListXY = csv.DictReader(countryListXY, delimiter='\t')
+    for row in countryListXY:
+        countryArray.append(dict(row))
+        
+print(countryArray[1])
 
     
 print("Total number or countries: ", len(countryArray))
@@ -91,6 +60,9 @@ print("Total number or countries: ", len(countryArray))
 #-----------------------------------------------
 # GET THE LIST OF GOALS, TARGETS AND INDICATORS
 #-----------------------------------------------
+
+# Start by creating a PoolManager() object using urllib3. 
+http = urllib3.PoolManager()
 
 response = http.request('GET', "https://unstats.un.org/SDGAPI/v1/sdg/Goal/List?includechildren=true")
 indicator_framework = json.loads(response.data.decode('UTF-8'))
@@ -147,6 +119,10 @@ count_country = 0
 
 for this_country in countryArray:
    # this_country = countryArray[51]   
+    
+    if this_country['CountryProfile'] != '1':
+        continue
+   
     count_country += 1
             
     country_profile = {}
@@ -157,6 +133,12 @@ for this_country in countryArray:
     
     country_profile['country_code'] = country_code
     country_profile['country_name'] = country_name
+    country_profile['X'] = this_country['X']
+    country_profile['Y'] = this_country['Y']
+    country_profile['ISO3CD'] = this_country['ISO3CD']
+    country_profile['UNMember'] = this_country['UNMember']
+    country_profile['CountryProfile'] = this_country['CountryProfile']
+    
     
     print("Building country profile for ", country_name, " - (", count_country, ")")
     
@@ -478,98 +460,98 @@ for this_country in countryArray:
             if this_fact['Text.type'] =='1':
                 fact_title = slice_description['seriesDesc']
                 if conditions:
-                    fact_text = this_fact['DA3.1'] + prog + "<span class='value'>" + str(value_y_min) + "</span>" + " <span class='unit'>" + this_fact['unit1']  + "</span>" + " in " +  "<span class='year'>" + str(y_min) + "</span>" + " to " + "<span class='value'>" + str(value_y_max) + this_fact['unit1']+ "</span> " +  " in " +  " <span class='year'>" + str(y_max)  + "</span>" + "."
+                    fact_text = this_fact['DA3.1'] + prog + "<span class='fact-value'>" + str(value_y_min) + "</span>" + " <span class='fact-unit'>" + this_fact['unit1']  + "</span>" + " in " +  "<span class='fact-year'>" + str(y_min) + "</span>" + " to " + "<span class='fact-value'>" + str(value_y_max) + this_fact['unit1']+ "</span> " +  " in " +  " <span class='fact-year'>" + str(y_max)  + "</span>" + "."
                     fact_values = [ str(value_y_min) + this_fact['unit1'], str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_min), str(y_max)]
                 else:
-                    fact_text = this_fact['DA2.1'] +  "<span class='value'>" + str(value_y_max) + "</span>" + " <span class='unit'>" + this_fact['unit1'] + "</span>"  + " in " + "<span class='year'>" + str(y_max)  + "</span>" + "."
+                    fact_text = this_fact['DA2.1'] +  "<span class='fact-value'>" + str(value_y_max) + "</span>" + " <span class='fact-unit'>" + this_fact['unit1'] + "</span>"  + " in " + "<span class='fact-year'>" + str(y_max)  + "</span>" + "."
                     fact_values = [ str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_max)]
                 
             elif this_fact['Text.type'] == '2':
                 fact_title = slice_description['seriesDesc']
-                fact_text = "In " +  "<span class='year'>" + y_max  + "</span>" + ", " +  "<span class='value'>" + str(value_y_max) + "</span>" + " <span class='unit'>" + this_fact['unit1'] + "</span> " + this_fact['DA2.1']
+                fact_text = "In " +  "<span class='fact-year'>" + y_max  + "</span>" + ", " +  "<span class='fact-value'>" + str(value_y_max) + "</span>" + " <span class='fact-unit'>" + this_fact['unit1'] + "</span> " + this_fact['DA2.1']
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
                 
             elif this_fact['Text.type'] == '3':
                 fact_title = slice_description['seriesDesc']
-                fact_text = "In " +  "<span class='year'> " + y_max +  "</span> " + ", " + this_fact['DA2.1'] +   "<span class='value'> " + str(value_y_max) + "</span>" + " <span class='unit'>" + this_fact['unit1'] +  "</span> " + this_fact['DA2.2']
+                fact_text = "In " +  "<span class='fact-year'> " + y_max +  "</span> " + ", " + this_fact['DA2.1'] +   "<span class='fact-value'> " + str(value_y_max) + "</span>" + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> " + this_fact['DA2.2']
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
                 
             elif this_fact['Text.type'] == '4':
                 fact_title = slice_description['seriesDesc']
-                fact_text = this_fact['DA2.1']+  "<span class='value'>"  + str(value_y_max) +  "</span> " + " in " + "<span class='year'> " + y_max +  "</span> " + ", meaning "  + str(float(value_y_max) * 100) +  this_fact['DA2.2'] + "." 
+                fact_text = this_fact['DA2.1']+  "<span class='fact-value'>"  + str(value_y_max) +  "</span> " + " in " + "<span class='fact-year'> " + y_max +  "</span> " + ", meaning "  + str(float(value_y_max) * 100) +  this_fact['DA2.2'] + "." 
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '7':
                 fact_title = slice_description['seriesDesc']
-                fact_text = this_fact['DA2.1'] +  "<span class='value'> " + str(value_y_max) +  "</span> " + " <span class='unit'>" + this_fact['unit1']+  "</span> "  + " in "+  "<span class='year'> "  + str(y_max)+  "</span> "  + "."
+                fact_text = this_fact['DA2.1'] +  "<span class='fact-value'> " + str(value_y_max) +  "</span> " + " <span class='fact-unit'>" + this_fact['unit1']+  "</span> "  + " in "+  "<span class='fact-year'> "  + str(y_max)+  "</span> "  + "."
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '8':
                 fact_title = slice_description['seriesDesc']
-                fact_text = "In "+  "<span class='year'> "  + y_max+  "</span> "  + ", " +  "<span class='value'> " + str(value_y_max)+  "</span> "  + " <span class='unit'>" + this_fact['unit1'] +  "</span> "+ this_fact['DA2.1'] + "."
+                fact_text = "In "+  "<span class='fact-year'> "  + y_max+  "</span> "  + ", " +  "<span class='fact-value'> " + str(value_y_max)+  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> "+ this_fact['DA2.1'] + "."
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '9':
                 fact_title = slice_description['seriesDesc']
                 if conditions:
-                    fact_text = "In "+  "<span class='year'> " + y_max +  "</span> "+ ", " + this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max) +  "</span> " + " <span class='unit'>" + this_fact['unit1']+  "</span> " + ", " + prog +  "<span class='value'> "+ str(value_y_min) +  "</span> " + " <span class='unit'>" + this_fact['unit2'] +  "</span> " + " in "+  "<span class='year'> " + y_min +  "</span> "
+                    fact_text = "In "+  "<span class='fact-year'> " + y_max +  "</span> "+ ", " + this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max) +  "</span> " + " <span class='fact-unit'>" + this_fact['unit1']+  "</span> " + ", " + prog +  "<span class='fact-value'> "+ str(value_y_min) +  "</span> " + " <span class='fact-unit'>" + this_fact['unit2'] +  "</span> " + " in "+  "<span class='fact-year'> " + y_min +  "</span> "
                     fact_values = [ str(value_y_min) + this_fact['unit1'], str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_min), str(y_max)]
                 else:
-                    fact_text = "In "+  "<span class='year'> " + y_max+  "</span> " + ", " + this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max) +  "</span> "  + " <span class='unit'>" + this_fact['unit1']+  "</span> " + "."
+                    fact_text = "In "+  "<span class='fact-year'> " + y_max+  "</span> " + ", " + this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max) +  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1']+  "</span> " + "."
                     fact_values = [ str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '10':
                 fact_title = slice_description['seriesDesc']
-                fact_text =  "In " +  "<span class='year'> "+ y_max +  "</span> "+ ", " +  this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max) +  "</span> "  + " <span class='unit'>" + this_fact['unit1']+  "</span> " + ". " + prog_10 
+                fact_text =  "In " +  "<span class='fact-year'> "+ y_max +  "</span> "+ ", " +  this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max) +  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1']+  "</span> " + ". " + prog_10 
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '11':
                 fact_title = slice_description['seriesDesc']
-                fact_text = "In "+  "<span class='year'> " + y_max+  "</span> " + ", " +  this_fact['DA2.1']+  "<span class='value'> " + str(value_y_max) +  "</span> "  + " <span class='unit'>" + this_fact['unit1'] +  "</span> "+ ". "
+                fact_text = "In "+  "<span class='fact-year'> " + y_max+  "</span> " + ", " +  this_fact['DA2.1']+  "<span class='fact-value'> " + str(value_y_max) +  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> "+ ". "
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '12':
                 fact_title = slice_description['seriesDesc']
-                fact_text = "As of " +  "<span class='year'> "+ y_max +  "</span> "+ ", " + country_name + prog_12 + "."
+                fact_text = "As of " +  "<span class='fact-year'> "+ y_max +  "</span> "+ ", " + country_name + prog_12 + "."
                 fact_values = [ str(value_y_max)]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '13':
                 fact_title = slice_description['seriesDesc']
-                fact_text =  "In " +  "<span class='year'> "+ y_max+  "</span> " + ", " +  this_fact['DA2.1']+  "<span class='value'> " + str(value_y_max) +  "</span> " + " <span class='unit'>" + this_fact['unit1'] +  "</span> "+ this_fact['DA2.2'] + "."
+                fact_text =  "In " +  "<span class='fact-year'> "+ y_max+  "</span> " + ", " +  this_fact['DA2.1']+  "<span class='fact-value'> " + str(value_y_max) +  "</span> " + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> "+ this_fact['DA2.2'] + "."
                 fact_values = [ str(value_y_max)+ this_fact['unit1']]
                 fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '14':
                 fact_title = slice_description['seriesDesc']
                 if conditions:
-                    fact_text = this_fact['DA3.1'] + prog +   "<span class='value'>" + str(value_y_min) +  "</span> "  + " <span class='unit'>" + this_fact['unit1'] +  "</span> " + " in " +  "<span class='year'> "+ y_min+  "</span> " + " to "+  "<span class='value'> " + str(value_y_max) +  "</span> "  + " <span class='unit'>"  + this_fact['unit1'] +  "</span> "+ " in " +  "<span class='year'> " + y_max+  "</span> " + "."
+                    fact_text = this_fact['DA3.1'] + prog +   "<span class='fact-value'>" + str(value_y_min) +  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> " + " in " +  "<span class='fact-year'> "+ y_min+  "</span> " + " to "+  "<span class='fact-value'> " + str(value_y_max) +  "</span> "  + " <span class='fact-unit'>"  + this_fact['unit1'] +  "</span> "+ " in " +  "<span class='fact-year'> " + y_max+  "</span> " + "."
                     fact_values = [ str(value_y_min) + this_fact['unit1'], str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_min), str(y_max)]
                 else:
-                    fact_text = this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max)+  "</span> " + " <span class='unit'>" + prog_mmr_max + this_fact['unit1'] +  "</span> " + " in "+  "<span class='year'> " + str(y_max) +  "</span> "+ "."
+                    fact_text = this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max)+  "</span> " + " <span class='fact-unit'>" + prog_mmr_max + this_fact['unit1'] +  "</span> " + " in "+  "<span class='fact-year'> " + str(y_max) +  "</span> "+ "."
                     fact_values = [ str(value_y_max) + prog_mmr_max + this_fact['unit1']]
                     fact_years =  [ str(y_max)]
 
             elif this_fact['Text.type'] == '15':
                 fact_title = slice_description['seriesDesc']
                 if conditions:
-                    fact_text =  "In "+  "<span class='year'> " + y_max +  "</span> "+ ", " +  this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max) +  "</span> " + " <span class='unit'>" + this_fact['unit1'] +  "</span> " + "," + prog + prog_15 + " in "+  "<span class='year'> " + y_min +  "</span> "+ "."
+                    fact_text =  "In "+  "<span class='fact-year'> " + y_max +  "</span> "+ ", " +  this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max) +  "</span> " + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> " + "," + prog + prog_15 + " in "+  "<span class='fact-year'> " + y_min +  "</span> "+ "."
                     fact_values = [ str(value_y_min) + this_fact['unit1'], str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_min), str(y_max)]
                 else:
-                    fact_text =  "In "+  "<span class='year'> " + y_max+  "</span> " + ", " +  this_fact['DA2.1'] +  "<span class='value'> "+ str(value_y_max)+  "</span> "  + " <span class='unit'>" + this_fact['unit1'] +  "</span> "+ "."
+                    fact_text =  "In "+  "<span class='fact-year'> " + y_max+  "</span> " + ", " +  this_fact['DA2.1'] +  "<span class='fact-value'> "+ str(value_y_max)+  "</span> "  + " <span class='fact-unit'>" + this_fact['unit1'] +  "</span> "+ "."
                     fact_values = [ str(value_y_max)+ this_fact['unit1']]
                     fact_years =  [ str(y_max)]
 
