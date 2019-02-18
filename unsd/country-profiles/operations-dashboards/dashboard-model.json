@@ -1,0 +1,597 @@
+{
+    "version": 26,
+    "headerPanel": {
+        "type": "headerPanel",
+        "size": "large",
+        "title": "Goal 4",
+        "subtitle": "United Nations Global SDG Dashboard",
+        "logoIcon": "<svg id=\"Layer_1\" data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\">\n  <defs>\n    <style>\n      .cls-1 {\n        fill: #c5192d;\n      }\n\n      .cls-2 {\n        fill: #fff;\n      }\n    </style>\n  </defs>\n  <title>Artboard 1</title>\n  <rect class=\"cls-1\" width=\"999.96\" height=\"1000\"/>\n  <path class=\"cls-2\" d=\"M301.21,165.45V171l25.92,4.83V165.57L317,163.63c7-3.37,10.13-10.36,10.13-19.29V104.78c0-12.77-6.27-22.06-20.84-22.06S285.55,92,285.55,104.78v39.56c0,11.09,4.7,19.18,15.66,21.11m-1.91-62.83c0-4.94,2.16-8.43,7-8.43s7.1,3.49,7.1,8.43v44.62c0,4.82-2.16,8.45-7.1,8.45s-7-3.63-7-8.45Z\"/>\n  <path class=\"cls-2\" d=\"M356.68,166.42c14,0,19.42-8.21,19.42-20.87V83.68H363.43v63.2c0,4.82-1.93,8.08-6.75,8.08s-6.75-3.26-6.75-8.08V83.68H336.18v61.87c0,12.66,6,20.87,20.5,20.87\"/>\n  <path class=\"cls-2\" d=\"M396.46,150.49H411l2.54,15h14.11L412.13,83.68H396.46L381,165.45h13Zm7.22-43.77h.14l5.42,32.8h-11Z\"/>\n  <polygon class=\"cls-2\" points=\"464.69 154.23 448.31 154.23 448.31 83.68 434.56 83.68 434.56 165.45 464.69 165.45 464.69 154.23\"/>\n  <rect class=\"cls-2\" x=\"471.07\" y=\"83.68\" width=\"13.74\" height=\"81.76\"/>\n  <polygon class=\"cls-2\" points=\"502.61 165.45 516.46 165.45 516.46 94.9 527.8 94.9 527.8 83.68 491.29 83.68 491.29 94.9 502.61 94.9 502.61 165.45\"/>\n  <polygon class=\"cls-2\" points=\"547.31 165.45 561.06 165.45 561.06 134.33 576.24 83.68 563.1 83.68 554.78 114.68 554.66 114.68 546.35 83.68 532 83.68 547.31 134.33 547.31 165.45\"/>\n  <polygon class=\"cls-2\" points=\"318.31 274.13 299.27 274.13 299.27 249.27 312.88 249.27 312.88 238.19 299.27 238.19 299.27 214.79 318.31 214.79 318.31 203.57 285.53 203.57 285.53 285.33 318.31 285.33 318.31 274.13\"/>\n  <path class=\"cls-2\" d=\"M367.85,263.38V225.52c0-12.66-5.17-22-19.88-22H326.74v81.77H348c14.71,0,19.88-9.41,19.88-22m-27.36,10.74V214.78h5.79c5.66,0,7.82,3.38,7.82,8.2V265.8c0,4.94-2.16,8.32-7.82,8.32Z\"/>\n  <path class=\"cls-2\" d=\"M376.9,203.57v61.87c0,12.67,6,20.86,20.49,20.86,14,0,19.41-8.19,19.41-20.86V203.57H404.15v63.19c0,4.83-1.94,8.08-6.76,8.08s-6.75-3.25-6.75-8.08V203.57Z\"/>\n  <path class=\"cls-2\" d=\"M425.84,264.23c0,12.66,6,22.07,20.5,22.07s19.4-8.68,19.4-20.39v-14.1H453.21v15.07c0,4.83-1.69,8-6.63,8s-7-3.49-7-8.45V222.51c0-4.95,2-8.45,7-8.45s6.63,2.89,6.63,8v10.73h12.53V223.1c0-12-4.22-20.5-19.4-20.5-14.47,0-20.5,9.29-20.5,22.07Z\"/>\n  <path class=\"cls-2\" d=\"M485.38,270.37H500l2.53,15H516.6l-15.55-81.76H485.38l-15.44,81.76h13Zm7.22-43.77h.12l5.43,32.8h-11Z\"/>\n  <polygon class=\"cls-2\" points=\"514.89 214.79 526.21 214.79 526.21 285.33 540.08 285.33 540.08 214.79 551.4 214.79 551.4 203.57 514.89 203.57 514.89 214.79\"/>\n  <rect class=\"cls-2\" x=\"559\" y=\"203.57\" width=\"13.75\" height=\"81.77\"/>\n  <path class=\"cls-2\" d=\"M602.65,286.3c14.57,0,20.83-9.4,20.83-22.08V224.67c0-12.78-6.26-22.06-20.83-22.06s-20.73,9.28-20.73,22.06v39.55c0,12.68,6.26,22.08,20.73,22.08m-7-63.8c0-4.94,2.17-8.43,7-8.43s7.11,3.49,7.11,8.43v43.89c0,5-2.17,8.45-7.11,8.45s-7-3.49-7-8.45Z\"/>\n  <polygon class=\"cls-2\" points=\"644.12 233.95 660.28 285.35 672.34 285.35 672.34 203.56 660.88 203.56 660.88 250.48 646.05 203.56 632.56 203.56 632.56 285.35 644.12 285.35 644.12 233.95\"/>\n  <path class=\"cls-2\" d=\"M156.65,285.43h32.11V252.72h13.69V226.26H188.76V83.8H155.45L96.87,231.9v20.82h59.78Zm-30-59.17,30.33-83h.3v83Z\"/>\n  <g>\n    <polygon class=\"cls-2\" points=\"438.3 536.19 258.96 432.63 258.96 767.63 438.3 821.74 438.3 536.19\"/>\n    <polygon class=\"cls-2\" points=\"458.03 536.87 458.03 821.86 638.53 767.59 638.53 432.64 458.03 536.87\"/>\n    <path class=\"cls-2\" d=\"M779.32,424.15a21.22,21.22,0,1,0-42.43,0V447h42.43Z\"/>\n    <polygon class=\"cls-2\" points=\"742.16 761.69 736.89 761.69 758.12 835.85 779.31 761.69 774.04 761.69 779.31 761.69 779.31 463.64 774.04 463.64 768.77 463.64 763.19 463.64 752.63 463.64 747.42 463.64 742.16 463.64 736.88 463.64 736.88 761.69 742.16 761.69\"/>\n    <polygon class=\"cls-2\" points=\"677.06 447.02 657.83 431.83 657.83 776.72 458.56 841.11 449.34 841.11 447.51 841.11 438.3 841.11 239.92 785.68 239.92 431.83 220.68 447.02 220.68 799.17 437.39 859.17 447.51 859.17 449.34 859.17 459.46 859.17 659.4 795.69 677.06 790.49 677.06 447.02\"/>\n  </g>\n</svg>",
+        "logoIconFillColor": "#c5192d",
+        "titleTextColor": "#c5192d",
+        "showMargin": true,
+        "backgroundImageSizing": "fit-height",
+        "normalBackgroundImagePlacement": "left",
+        "horizontalBackgroundImagePlacement": "top",
+        "showSignOutMenu": true,
+        "menuLinks": [],
+        "backgroundColor": "#ffffff",
+        "selectors": []
+    },
+    "widgets": [
+        {
+            "events": [
+                {
+                    "type": "selectionChanged",
+                    "actions": [
+                        {
+                            "type": "flashGeometry",
+                            "targetId": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4"
+                        },
+                        {
+                            "type": "pan",
+                            "targetId": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4"
+                        }
+                    ]
+                }
+            ],
+            "type": "listWidget",
+            "iconType": "none",
+            "text": "<p><strong>{geoAreaName}:&nbsp;<span style=\"color:#c5192d\">{latest_value}&nbsp;&nbsp;&nbsp;</span></strong> (in year&nbsp;<span style=\"color:#c5192d\">{latest_year}</span>)</p>\n",
+            "selectionMode": "single",
+            "backgroundColor": "#ffffff",
+            "datasets": [
+                {
+                    "type": "serviceDataset",
+                    "dataSource": {
+                        "id": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4#SE_PRE_PARTN_4_2_2_2018Q2G01_1_3724"
+                    },
+                    "filter": {
+                        "type": "filterGroup",
+                        "condition": "OR",
+                        "rules": [
+                            {
+                                "type": "filterGroup",
+                                "condition": "AND",
+                                "rules": [
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "is_not_null",
+                                        "constraint": {
+                                            "type": "nil"
+                                        }
+                                    },
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "greater",
+                                        "constraint": {
+                                            "type": "value",
+                                            "value": 0
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "outFields": [
+                        "*"
+                    ],
+                    "groupByFields": [],
+                    "orderByFields": [
+                        "latest_value asc",
+                        "geoAreaName asc"
+                    ],
+                    "statisticDefinitions": [],
+                    "maxFeatures": 200,
+                    "querySpatialRelationship": "esriSpatialRelIntersects",
+                    "returnGeometry": false,
+                    "clientSideStatistics": false,
+                    "name": "main"
+                }
+            ],
+            "id": "25634769-1dcb-4125-b3a2-19a743cc5d2a",
+            "name": "Indicator 4.5.1: Gender parity index for achievement in mathematics, primary education level  (ratio)",
+            "caption": "<p><span style=\"font-size:1.5em\"><strong><span style=\"color:#a80000\">Participation rate in organized learning</span>&nbsp;<span style=\"color:#a80000\">one year before the official primary entry age</span></strong></span></p>\n",
+            "showLastUpdate": false,
+            "showCaptionWhenNoData": true,
+            "showDescriptionWhenNoData": true
+        },
+        {
+            "type": "mapWidget",
+            "flashRepeats": 3,
+            "itemId": "a9265aa3fe8d49cbb27108fddbae9d02",
+            "mapTools": [],
+            "showNavigation": false,
+            "showPopup": true,
+            "scalebarStyle": "none",
+            "layers": [
+                {
+                    "type": "featureLayerDataSource",
+                    "layerId": "SE_PRE_PARTN_4_2_2_2018Q2G01_1_3724"
+                }
+            ],
+            "id": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4",
+            "name": "Indicator 4.2.2: Participation rate in organized learning, one year before the official primary entry age (percent)",
+            "description": "<ul>\n\t<li>\n\t<p><span style=\"font-size:1.5em\"><strong><span style=\"color:#c5192d\">Target 4.2:</span>&nbsp;</strong></span>By 2030, ensure that all girls and boys have access to quality early childhood development, care and pre-primary education so that they are ready for primary education</p>\n\t</li>\n\t<li><span style=\"font-size:1.5em\"><strong><span style=\"color:#c5192d\">Indicator 4.2.2:</span>&nbsp;</strong></span>Participation rate in organized learning (one year before the official primary entry age), by sex</li>\n</ul>\n",
+            "showLastUpdate": true,
+            "showCaptionWhenNoData": true,
+            "showDescriptionWhenNoData": true
+        },
+        {
+            "type": "indicatorWidget",
+            "defaultSettings": {
+                "textColor": "#ffffff",
+                "backgroundColor": "#c5192d",
+                "topSection": {
+                    "fontSize": 80,
+                    "textInfo": {
+                        "text": "Number of countries available",
+                        "fillColor": "#ffffff"
+                    }
+                },
+                "middleSection": {
+                    "fontSize": 160,
+                    "textInfo": {
+                        "text": "{value}",
+                        "fillColor": "#ffffff"
+                    },
+                    "iconInfo": {
+                        "fillColor": "#ffffff",
+                        "align": "left",
+                        "icon": "<svg xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\" id=\"ember5791\" class=\"icon ember-view\" viewBox=\"0 0 16 16\"><path d=\"M1 1v14h14V1H1zm13 13H2V2h12v12z\"/><path d=\"M12.512 4.754L6.5 10.767 3.618 7.885l-.707.707L6.5 12.18l6.719-6.72z\"/></svg>"
+                    }
+                },
+                "bottomSection": {
+                    "fontSize": 80,
+                    "textInfo": {}
+                }
+            },
+            "comparison": "none",
+            "valueFormat": {
+                "name": "value",
+                "type": "decimal",
+                "prefix": false
+            },
+            "percentageFormat": {
+                "name": "percentage",
+                "type": "decimal",
+                "prefix": false
+            },
+            "ratioFormat": {
+                "name": "ratio",
+                "type": "decimal",
+                "prefix": false
+            },
+            "valueType": "statistic",
+            "showCaptionWhenNoValue": true,
+            "showDescriptionWhenNoValue": true,
+            "datasets": [
+                {
+                    "type": "serviceDataset",
+                    "dataSource": {
+                        "id": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4#SE_PRE_PARTN_4_2_2_2018Q2G01_1_3724"
+                    },
+                    "filter": {
+                        "type": "filterGroup",
+                        "condition": "OR",
+                        "rules": [
+                            {
+                                "type": "filterGroup",
+                                "condition": "AND",
+                                "rules": [
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "is_not_null",
+                                        "constraint": {
+                                            "type": "nil"
+                                        }
+                                    },
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "greater",
+                                        "constraint": {
+                                            "type": "value",
+                                            "value": "0"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "outFields": [
+                        "*"
+                    ],
+                    "groupByFields": [],
+                    "orderByFields": [],
+                    "statisticDefinitions": [
+                        {
+                            "onStatisticField": "FID",
+                            "outStatisticFieldName": "value",
+                            "statisticType": "count"
+                        }
+                    ],
+                    "querySpatialRelationship": "esriSpatialRelIntersects",
+                    "returnGeometry": false,
+                    "clientSideStatistics": false,
+                    "name": "main"
+                }
+            ],
+            "id": "8ccd0ce6-edb1-48f1-9e18-f3c029b1e1a7",
+            "name": "Indicator (1)",
+            "showLastUpdate": false,
+            "showCaptionWhenNoData": true,
+            "showDescriptionWhenNoData": true
+        },
+        {
+            "type": "serialChartWidget",
+            "category": {
+                "labelOverrides": [],
+                "byCategoryColors": false,
+                "labelsPlacement": "default",
+                "labelRotation": 0,
+                "fieldName": "geoAreaName",
+                "nullLabel": "Null",
+                "blankLabel": "Blank",
+                "defaultColor": "#d6d6d6",
+                "nullColor": "#d6d6d6",
+                "blankColor": "#d6d6d6"
+            },
+            "valueFormat": {
+                "name": "value",
+                "type": "decimal",
+                "prefix": true,
+                "pattern": "#,###.#"
+            },
+            "labelFormat": {
+                "name": "label",
+                "type": "decimal",
+                "prefix": true,
+                "pattern": "#,###.#"
+            },
+            "datePeriodPatterns": [
+                {
+                    "period": "ss",
+                    "pattern": "HH:mm:ss"
+                },
+                {
+                    "period": "mm",
+                    "pattern": "HH:mm"
+                },
+                {
+                    "period": "hh",
+                    "pattern": "HH:mm"
+                },
+                {
+                    "period": "DD",
+                    "pattern": "MMM d"
+                },
+                {
+                    "period": "MM",
+                    "pattern": "MMM"
+                },
+                {
+                    "period": "YYYY",
+                    "pattern": "yyyy"
+                }
+            ],
+            "chartScrollbar": {
+                "enabled": true,
+                "dragIcon": "dragIconRoundSmall",
+                "dragIconHeight": 20,
+                "dragIconWidth": 20,
+                "scrollbarHeight": 15
+            },
+            "categoryAxis": {
+                "title": "",
+                "titleRotation": 270,
+                "fontSize": 10,
+                "gridPosition": "start",
+                "gridThickness": 1,
+                "gridAlpha": 0.15,
+                "axisThickness": 1,
+                "axisAlpha": 0.5,
+                "axisColor": "#ebebeb",
+                "labelsEnabled": true,
+                "parseDates": false,
+                "minPeriod": "DD"
+            },
+            "valueAxis": {
+                "titleRotation": 270,
+                "gridThickness": 1,
+                "gridAlpha": 0.15,
+                "axisThickness": 1,
+                "axisAlpha": 0.5,
+                "labelsEnabled": true,
+                "stackType": "none",
+                "integersOnly": false,
+                "logarithmic": false
+            },
+            "legend": {
+                "enabled": false,
+                "position": "bottom",
+                "markerSize": 15,
+                "markerType": "circle",
+                "align": "center",
+                "labelWidth": 100,
+                "valueWidth": 0
+            },
+            "graphs": [
+                {
+                    "valueField": "latest_value",
+                    "title": "Latest Value",
+                    "lineColor": "#c5192d",
+                    "lineColorField": "_lineColor_",
+                    "fillColorsField": "_fillColor_",
+                    "type": "column",
+                    "fillAlphas": 1,
+                    "lineAlpha": 1,
+                    "lineThickness": 1,
+                    "bullet": "none",
+                    "bulletAlpha": 1,
+                    "bulletBorderAlpha": 0,
+                    "bulletBorderThickness": 2,
+                    "showBalloon": true,
+                    "bulletSize": 8
+                }
+            ],
+            "guides": [
+                {
+                    "value": "80",
+                    "boldLabel": true,
+                    "color": "",
+                    "position": "right",
+                    "inside": true,
+                    "above": true,
+                    "fillAlpha": 0,
+                    "fillColor": "#d6d6d6",
+                    "lineAlpha": 1,
+                    "lineColor": "#f5dddd",
+                    "lineThickness": 2
+                }
+            ],
+            "splitBy": {
+                "defaultColor": "#d6d6d6",
+                "seriesProperties": []
+            },
+            "rotate": true,
+            "commonGraphProperties": {
+                "lineColorField": "_lineColor_",
+                "fillColorsField": "_fillColor_",
+                "type": "column",
+                "fillAlphas": 1,
+                "lineAlpha": 1,
+                "lineThickness": 1,
+                "bullet": "none",
+                "bulletAlpha": 1,
+                "bulletBorderAlpha": 0,
+                "bulletBorderThickness": 2,
+                "showBalloon": true,
+                "bulletSize": 8
+            },
+            "events": [
+                {
+                    "type": "selectionChanged",
+                    "actions": [
+                        {
+                            "type": "flashGeometry",
+                            "targetId": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4"
+                        },
+                        {
+                            "type": "pan",
+                            "targetId": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4"
+                        }
+                    ]
+                }
+            ],
+            "selectionMode": "single",
+            "categoryType": "features",
+            "backgroundColor": "#ffffff",
+            "datasets": [
+                {
+                    "type": "serviceDataset",
+                    "dataSource": {
+                        "id": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4#SE_PRE_PARTN_4_2_2_2018Q2G01_1_3724"
+                    },
+                    "filter": {
+                        "type": "filterGroup",
+                        "condition": "OR",
+                        "rules": [
+                            {
+                                "type": "filterGroup",
+                                "condition": "AND",
+                                "rules": [
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "is_not_null",
+                                        "constraint": {
+                                            "type": "nil"
+                                        }
+                                    },
+                                    {
+                                        "type": "filterRule",
+                                        "field": {
+                                            "name": "latest_value",
+                                            "type": "esriFieldTypeDouble"
+                                        },
+                                        "operator": "greater",
+                                        "constraint": {
+                                            "type": "value",
+                                            "value": 0
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "outFields": [
+                        "*"
+                    ],
+                    "groupByFields": [],
+                    "orderByFields": [
+                        "latest_value asc"
+                    ],
+                    "statisticDefinitions": [],
+                    "querySpatialRelationship": "esriSpatialRelIntersects",
+                    "returnGeometry": false,
+                    "clientSideStatistics": false,
+                    "name": "main"
+                }
+            ],
+            "id": "4230a873-02f0-4c64-adf9-c9906abdda3e",
+            "name": "Serial Chart (1)",
+            "showLastUpdate": false,
+            "showCaptionWhenNoData": true,
+            "showDescriptionWhenNoData": true
+        }
+    ],
+    "settings": {
+        "maxPaginationRecords": 50000,
+        "allowElementResizing": false
+    },
+    "mapOverrides": {
+        "trackedFeatureRadius": 60
+    },
+    "theme": "light",
+    "themeOverrides": {
+        "elementBackgroundColor": "#ebebeb",
+        "elementOutlineColor": "#ffffff",
+        "activeTabBorderColor": "#5c5c5c"
+    },
+    "numberPrefixOverrides": [
+        {
+            "key": "yotta",
+            "symbol": "Y",
+            "enabled": true
+        },
+        {
+            "key": "zeta",
+            "symbol": "Z",
+            "enabled": true
+        },
+        {
+            "key": "exa",
+            "symbol": "E",
+            "enabled": true
+        },
+        {
+            "key": "peta",
+            "symbol": "P",
+            "enabled": true
+        },
+        {
+            "key": "tera",
+            "symbol": "T",
+            "enabled": true
+        },
+        {
+            "key": "giga",
+            "symbol": "B",
+            "enabled": true
+        },
+        {
+            "key": "mega",
+            "symbol": "M",
+            "enabled": true
+        },
+        {
+            "key": "kilo",
+            "symbol": "K",
+            "enabled": true
+        },
+        {
+            "key": "base",
+            "symbol": "",
+            "enabled": true
+        },
+        {
+            "key": "deci",
+            "symbol": "d",
+            "enabled": false
+        },
+        {
+            "key": "centi",
+            "symbol": "c",
+            "enabled": false
+        },
+        {
+            "key": "milli",
+            "symbol": "m",
+            "enabled": false
+        },
+        {
+            "key": "micro",
+            "symbol": "µ",
+            "enabled": false
+        },
+        {
+            "key": "nano",
+            "symbol": "n",
+            "enabled": false
+        }
+    ],
+    "layout": {
+        "rootElement": {
+            "type": "stackLayoutElement",
+            "orientation": "col",
+            "elements": [
+                {
+                    "type": "stackLayoutElement",
+                    "orientation": "row",
+                    "elements": [
+                        {
+                            "type": "itemLayoutElement",
+                            "id": "25634769-1dcb-4125-b3a2-19a743cc5d2a",
+                            "width": 1,
+                            "height": 0.798525428829371,
+                            "tabName": "Indicator 4.2.2"
+                        },
+                        {
+                            "type": "itemLayoutElement",
+                            "id": "8ccd0ce6-edb1-48f1-9e18-f3c029b1e1a7",
+                            "width": 1,
+                            "height": 0.20147457117062895,
+                            "tabName": "Indicator 4.2.2"
+                        }
+                    ],
+                    "width": 0.28351461966947955,
+                    "height": 1
+                },
+                {
+                    "type": "itemLayoutElement",
+                    "id": "4230a873-02f0-4c64-adf9-c9906abdda3e",
+                    "width": 0.348807769302763,
+                    "height": 1,
+                    "tabName": "Indicator 4.2.2"
+                },
+                {
+                    "type": "itemLayoutElement",
+                    "id": "7e0130b9-dea4-46c4-99d9-0cfb90452bf4",
+                    "width": 0.3676776110277573,
+                    "height": 1,
+                    "tabName": "Indicator 4.2.2"
+                }
+            ],
+            "width": 1,
+            "height": 1
+        }
+    }
+}
