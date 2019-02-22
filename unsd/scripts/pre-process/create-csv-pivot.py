@@ -158,8 +158,11 @@ for i in range(len(long_files)):
             # Export to csv file
             #-------------------------------------------------------
             
-            export_csv = pivot_3.to_csv (wide_files[i], index = None, header=True) #Don't forget to add '.csv' at the end of the path
-       
+            export_csv = pivot_3.to_csv (wide_files[i], 
+                                         index = None, 
+                                         header=True,
+                                         encoding='utf-8',
+                                         quoting=csv.QUOTE_NONNUMERIC)
             #------------------------------------------------------
             
             

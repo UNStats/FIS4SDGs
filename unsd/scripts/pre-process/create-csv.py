@@ -209,11 +209,14 @@ for s in series_list:
      
     try:
         with open('data\\csv\\'+ record['IndicatorCode'] + "-" + s['seriesCode']+'_long.csv', 'w', newline='') as outfile:
-            fp = csv.DictWriter(outfile, series_dataset[0].keys())
+            fp = csv.DictWriter(outfile, series_dataset[0].keys(), quoting=csv.QUOTE_NONNUMERIC)
             fp.writeheader()
             fp.writerows(series_dataset)
             
             print('=====FINISHED WRITING SERIES ' + record['SeriesCode'] + ' TO FILE=====')
+            
+              
+          
     
     except:
         
