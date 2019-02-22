@@ -22,6 +22,21 @@ wide_files = []
 for f in long_files:
     wide_files.append(f.replace("long", "wide"))
     
+
+#-----------------------------------------------------------------------------
+# List of countreis to be plotted on a map (with XY coordinates)
+#------------------------------------------- ----------------------------------
+
+countryListXY = []
+with open('..\\..\\CountryListXY.txt', newline = '') as countryList:                                                                                          
+    countryList = csv.DictReader(countryList, delimiter='\t')
+    for row in countryList:
+        countryListXY.append(dict(row))
+        
+country_df = pd.DataFrame.from_records(countryListXY)
+
+country_df.rename(columns={'geoAreaCode': 'GeoArea_Code', 'geoAreaName': 'GeoArea_Desc'}, inplace=True)
+  
 #-------------------------------------------------------
 
 
@@ -29,7 +44,7 @@ for f in long_files:
 for i in range(len(long_files)):
     
     f = long_files[i]
-    f# = '1.1.1-SI_POV_EMP1_long.csv'
+    #f = '1.1.1-SI_POV_EMP1_long.csv'
     print("====PIVOTING FILE " + f)
 
     with open(f) as filename:
@@ -101,10 +116,36 @@ for i in range(len(long_files)):
         #-------------------------------------------------------
         # Add latest year columns to pivot table
         #-------------------------------------------------------
-        
-        
+                
         test_merge = pd.merge(pivot_table, latest_df[index_c +['Latest_Year','Latest_Value']], how='outer', on=index_c)
              
+        
+        #-------------------------------------------------------
+        # Add countries without data (so they can be displayed on a map)
+        #-------------------------------------------------------
+        
+        slice_key_index = index_c[:]
+        slice_key_index.remove('ISO3CD')
+        slice_key_index.remove('X')
+        slice_key_index.remove('Y')
+        slice_key_index.remove('GeoArea_Code')
+        slice_key_index.remove('GeoArea_Desc')
+        
+        slice_key = test_merge[slice_key_index].copy()
+        slice_key = slice_key.drop_duplicates()
+            
+        def cartesian_product_basic(left, right):
+            return (
+               left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
+        
+        x = cartesian_product_basic(country_df,slice_key)
+        
+        export_csv = x.to_csv ('test_cartesian.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
+   
+        #-------------------------------------------------------
+        # Export to csv file
+        #-------------------------------------------------------
+        
         export_csv = test_merge.to_csv (wide_files[i], index = None, header=True) #Don't forget to add '.csv' at the end of the path
    
         #------------------------------------------------------
