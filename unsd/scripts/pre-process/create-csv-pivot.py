@@ -45,7 +45,6 @@ for i in range(len(long_files)):
     
     f = long_files[i]
     #f = '1.1.1-SI_POV_EMP1_long.csv'
-    print("====PIVOTING FILE " + f)
 
     with open(f) as filename:
         reader = csv.reader(filename)
@@ -117,37 +116,58 @@ for i in range(len(long_files)):
         # Add latest year columns to pivot table
         #-------------------------------------------------------
                 
-        test_merge = pd.merge(pivot_table, latest_df[index_c +['Latest_Year','Latest_Value']], how='outer', on=index_c)
+        pivot_2 = pd.merge(pivot_table, latest_df[index_c +['Latest_Year','Latest_Value']], how='outer', on=index_c)
              
         
         #-------------------------------------------------------
         # Add countries without data (so they can be displayed on a map)
         #-------------------------------------------------------
         
-        slice_key_index = index_c[:]
-        slice_key_index.remove('ISO3CD')
-        slice_key_index.remove('X')
-        slice_key_index.remove('Y')
-        slice_key_index.remove('GeoArea_Code')
-        slice_key_index.remove('GeoArea_Desc')
+        error_log = []
         
-        slice_key = test_merge[slice_key_index].copy()
-        slice_key = slice_key.drop_duplicates()
+        try:
             
-        def cartesian_product_basic(left, right):
-            return (
-               left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
+            country_part =  ['ISO3CD','X', 'Y', 'GeoArea_Code', 'GeoArea_Desc']
+            
+            slice_part = [x for x in index_c if x not in country_part]
+            
+            slice_key = pivot_2[slice_part].copy()
+            slice_key = slice_key.drop_duplicates()
+            
+            country_key = pivot_2[country_part].copy()
+            country_key = country_key.drop_duplicates()
+            
+            # Add 
+            
+            country_key = country_key.append(country_df[country_part]).drop_duplicates()
+            #--------------------------------------------------------
+                
+            def cartesian_product_basic(left, right):
+                return (
+                   left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
+            
+            full_key = cartesian_product_basic(country_key,slice_key)
+            
+            #  export_csv = x.to_csv ('test_cartesian.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
+           
+           
+            pivot_3 = pd.merge(full_key, pivot_2, how='left', on=index_c)
+                 
+       
+            #-------------------------------------------------------
+            # Export to csv file
+            #-------------------------------------------------------
+            
+            export_csv = pivot_3.to_csv (wide_files[i], index = None, header=True) #Don't forget to add '.csv' at the end of the path
+       
+            #------------------------------------------------------
+            
+            
+            print("====FINISHED PIVOTING FILE " + f + "(" + str(i) + " of " + str(len(long_files)) + ")")
         
-        x = cartesian_product_basic(country_df,slice_key)
-        
-        export_csv = x.to_csv ('test_cartesian.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
-   
-        #-------------------------------------------------------
-        # Export to csv file
-        #-------------------------------------------------------
-        
-        export_csv = test_merge.to_csv (wide_files[i], index = None, header=True) #Don't forget to add '.csv' at the end of the path
-   
-        #------------------------------------------------------
-        
-    
+
+        except:
+            
+            print('===== ' + f + ' COULD NOT BE WRITTEN TO PIVOT FILE=====')
+            error_log.append(f)
+            
