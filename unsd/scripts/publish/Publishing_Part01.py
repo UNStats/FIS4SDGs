@@ -1,4 +1,5 @@
 import sys
+import json
 
 #--------------------------------------------
 # Set up the global information and variables
@@ -38,8 +39,6 @@ from modules01 import *
 
 series_metadata = get_series_metadata(metadata_dir + "metadata.json")
 
-layer_info = get_layer_info_template(metadata_dir + "layerinfo.json")
-
 wide_files = get_file_catalog(data_dir, pattern = '*_wide.csv')
 
 key_list = ['GoalCode', 'GoalDesc',
@@ -59,8 +58,8 @@ sdg_colors = get_sdg_colors(series_metadata)
 # Add tags to csv metadata (from current metadata.json file)
 csv_metadata = add_tags_to_csv_metadata(csv_metadata, series_metadata)
 
-
-
+with open(metadata_dir + 'unsd_metadata.json', 'w') as fp:
+    json.dump(csv_metadata, fp, indent=2)
         
 
 
