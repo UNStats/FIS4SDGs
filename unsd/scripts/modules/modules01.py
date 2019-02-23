@@ -6,44 +6,6 @@ import getpass
 from arcgis.gis import GIS
 import json
 
-#----------------------------------------------------------------
-
-def connect_to_arcGIS():
-
-    """Open connection to ArcGIS Online Organization"""
-        
-    online_username = input('Username: ')
-    online_password = getpass.getpass('Password: ')
-    online_connection = "https://www.arcgis.com"
-    gis_online_connection = GIS(online_connection, 
-                                online_username, 
-                                online_password)
-    
-    return online_username, gis_online_connection
-    
-#----------------------------------------------------------------
-    
-def open_data_group(gis_online_connection,id):
-    
-    open_data_group = gis_online_connection.groups.get(id)
-    return (open_data_group)
-   
-    
-#----------------------------------------------------------------
-    
-def cleanup_staging_folder(user_items):
-
-    """ Cleanup staging folder for Open Data (delete everything in the staging folder for Open Data)"""
-    
-    if input("Do you want to cleanup your staging folder for Open Data? (y/n)") == "y":
-        if input("Are you sure? (y/n)") == "y":
-            for item in user_items:
-                print('deleting item ' + item.title)
-                item.delete()
-        else: print('Cleanup of staging forlder for Open Data was canceled') 
-    else:
-        print('Cleanup of staging forlder for Open Data was canceled')      
-        
 #---------------------------------------------------------------
 
 def get_series_metadata(file, print_first_element = True):    
@@ -63,25 +25,9 @@ def get_series_metadata(file, print_first_element = True):
     
         
 #----------------------------------------------------------------
-
-def get_layer_info_template(file, print_first_element = True):  
-    
-    """ Get layer info template """
-    
-    try:
-        layer_info_template = json.load(open(file))
-        if(print_first_element==True):
-            print("/n----This is the layer info template ----")
-            print(layer_info_template)
-        return layer_info_template
-    except:
-        print("Unexpected error:", sys.exc_info()[0]) 
-        return None
-        
-#----------------------------------------------------------------
         
     
-def file_catalog (dir_path, pattern = '*'):
+def get_file_catalog (dir_path, pattern = '*'):
     
     """ Create a list of files in a folder """
 
@@ -140,7 +86,7 @@ def read_csv_to_dict (file, encoding="utf8"):
 
 #----------------------------------------------------------------
         
-def csv_metadata(file_list, key_list, dir_path = ''):
+def get_csv_metadata(file_list, key_list, dir_path = ''):
 
     "Extract metadata key-value pairs from a list of csv files"
 
@@ -164,7 +110,50 @@ def csv_metadata(file_list, key_list, dir_path = ''):
         return None
         
 
+#----------------------------------------------------------------
+        
+def get_sdg_colors(series_metadata):
+    """Extract color schemes from current metadata.json file"""
+    
+    try:
+        
+        sdg_colors = list()
+
+        for gg in  list(range(17+1)):
+            for item in series_metadata:
+                if(item['goalCode']==gg):
+                    gg_dict = {k: item[k] for k in ('hex','rgb','iconUrl','ColorScheme','ColorSchemeCredits')}
+                    gg_dict = {'GoalCode': gg, **gg_dict}
+                    sdg_colors.append(gg_dict)
+                    break
+        
+        return sdg_colors
+    
+    except:
+        print("Unexpected error:", sys.exc_info()[0]) 
+        return None
 
 #----------------------------------------------------------------
+        
+def add_tags_to_csv_metadata(csv_metadata, series_metadata):
+    """Add tags to csv metadata from current metadata.json file"""
+    
+    try:
+        
+        l = list()
+        
+        for item in csv_metadata:
+            for m in series_metadata:
+                t = list()
+                if(m['seriesCode']==item['SeriesCode']):
+                    t = m['TAGS']
+                    break
+            item_dict = {'Tags': t, **item}
+            l.append(item_dict)
+        return l
+    
+    except:
+        print("Unexpected error:", sys.exc_info()[0]) 
+        return None
+    
 
-       

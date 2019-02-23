@@ -3,9 +3,6 @@ import sys
 #--------------------------------------------
 # Set up the global information and variables
 #--------------------------------------------
-
-global data_dir                # Directory where csv files are located
-global metadata_dir            # Directory where meatadata files are located
 global open_data_group         # ArcGIS group the data will be shared with
 global failed_series           # Keeps track of any csv file that cannot be staged
 global online_username         # ArcGIS credentials
@@ -14,14 +11,9 @@ global layer_json_data         # Information pertaining to the layer template
 global user_items              # Collection of items owned by user
 
 
+
 # Initialize failed_series array
 failed_series = []
-
-#=============================================
-# INPUT USER PARAMETERS
-#=============================================
-property_update_only = False
-update_symbology = True
 
 #--------------------------------------------
 # Set path to data and metadata directories in
@@ -39,7 +31,7 @@ modules_dir = r"../modules/"
 sys.path.append(modules_dir)
 # sys.path
 
-from modules01 import *
+from modules02 import *
 
 #=============================================
 # ESTABLISH CONNECTIONS TO ARCGIS
@@ -61,32 +53,3 @@ user_items = user.items(folder='Open Data', max_items=800)
 #=============================================
 
 cleanup_staging_folder(user_items)
-
-#=============================================
-# GET METADATA
-#=============================================
-
-series_metadata = get_series_metadata(metadata_dir + "metadata.json")
-
-layer_info = get_layer_info_template(metadata_dir + "layerinfo.json")
-
-wide_files = get_file_catalog(data_dir, pattern = '*_wide.csv')
-
-key_list = ['GoalCode', 'GoalDesc',
-            'TargetCode', 'TargetDesc', 
-            'IndicatorCode', 'IndicatorDesc', 'IndicatorTier', 
-            'SeriesCode', 'SeriesDesc', 'SeriesRelease']
-
-csv_metadta = get_csv_metadata(wide_files, key_list, data_dir)
-
-#----------------------------------------------
-
-# Extract logos and color schemes for each goal
-sdg_colors = get_sdg_colors(series_metadata)
-
-#----------------------------------------------
-
-
-
-
-
