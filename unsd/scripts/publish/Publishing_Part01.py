@@ -52,6 +52,8 @@ csv_metadata = get_csv_metadata(wide_files, key_list, data_dir)
 
 # Extract logos and color schemes for each goal
 sdg_colors = get_sdg_colors(series_metadata)
+with open(metadata_dir + 'sdg_colors.json', 'w') as fp:
+    json.dump(sdg_colors, fp, indent=2)
 
 #----------------------------------------------
 
