@@ -119,7 +119,7 @@ for s in selected_series:
         online_item = publish_csv(series_metadata_item = s, 
                                   item_properties=s_card,
                                   thumbnail=s_color['iconUrl'],
-                           online_item       layer_info = layer_info, 
+                                  layer_info = layer_info, 
                                   gis_online_connection= gis_online_connection,
                                   data_dir = data_dir,
                                   online_username = online_username,
