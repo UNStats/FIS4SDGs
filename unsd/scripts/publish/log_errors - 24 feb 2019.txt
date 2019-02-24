@@ -1,0 +1,59 @@
+
+Processing series code: 1.5.2 VC_DSR_LSGP
+Searching for VC_DSR_LSGP_1_5_2_2019Q1G01
+ -- Item VC_DSR_LSGP_1_5_2_2019Q1G01 not found (force find)
+Adding CSV File to ArcGIS Online....
+Analyze Feature Service....
+Publishing Feature Service....
+Traceback (most recent call last):
+
+  File "<ipython-input-126-cc8551652d5f>", line 37, in <module>
+    color=s_color["rgb"])
+
+  File "../modules\modules02.py", line 241, in publish_csv
+    csv_lyr = csv_item.publish(publish_parameters=publish_parameters, overwrite=True)
+
+  File "C:\Users\L.GonzalezMorales\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\arcgis\gis\__init__.py", line 7948, in publish
+    serviceitem_id = self._check_publish_status(ret, folder)
+
+  File "C:\Users\L.GonzalezMorales\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\arcgis\gis\__init__.py", line 8193, in _check_publish_status
+    raise Exception("Job failed.")
+
+Exception: Job failed.
+
+--------------------------
+
+Processing series code: 11.5.2 VC_DSR_LSGP
+Searching for VC_DSR_LSGP_11_5_2_2019Q1G01
+ -- Item VC_DSR_LSGP_11_5_2_2019Q1G01 not found (force find)
+Adding CSV File to ArcGIS Online....
+Analyze Feature Service....
+Publishing Feature Service....
+Traceback (most recent call last):
+
+  File "<ipython-input-127-4c5d36534fc8>", line 34, in <module>
+    color=s_color["rgb"])
+
+  File "../modules\modules02.py", line 241, in publish_csv
+    csv_lyr = csv_item.publish(publish_parameters=publish_parameters, overwrite=True)
+
+  File "C:\Users\L.GonzalezMorales\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\arcgis\gis\__init__.py", line 7948, in publish
+    serviceitem_id = self._check_publish_status(ret, folder)
+
+  File "C:\Users\L.GonzalezMorales\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone\lib\site-packages\arcgis\gis\__init__.py", line 8193, in _check_publish_status
+    raise Exception("Job failed.")
+
+Exception: Job failed.
+
+-------------
+Processing series code: 15.6.1 ER_CBD_ORSPGRFA
+Searching for ER_CBD_ORSPGRFA_15_6_1_2019Q1G01
+ -- Item ER_CBD_ORSPGRFA_15_6_1_2019Q1G01 not found (force find)
+Adding CSV File to ArcGIS Online....
+Analyze Feature Service....
+Publishing Feature Service....
+Update Feature Service Symbology
+Moving CSV to Open Data Folder
+Updating Feature Service metadata....
+The size of the title cannot be more than 256 characters
+Traceback (most recent call last):

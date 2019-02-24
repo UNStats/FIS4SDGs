@@ -92,7 +92,7 @@ layer_info = json.load(open(metadata_dir + 'layerinfo.json'))
 selected_series = list()
 selected_series = series_metadata[:]
 
-for s in selected_series:
+for s in selected_series[89:]:
     
     print("\nProcessing series code:", s["IndicatorCode"], s["SeriesCode"])
     s_color = next(item for item in sdg_colors if item['GoalCode'] == int(s['GoalCode']))
