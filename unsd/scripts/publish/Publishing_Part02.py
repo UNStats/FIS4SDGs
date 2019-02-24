@@ -88,15 +88,18 @@ layer_info = json.load(open(metadata_dir + 'layerinfo.json'))
 #=============================================
 
 selected_series = list()
-selected_series.append(series_metadata[0])
+selected_series = series_metadata[:][0:4]
 
 for s in selected_series:
+    
     print("\nProcessing series code:", s["IndicatorCode"], s["SeriesCode"])
     s_color = next(item for item in sdg_colors if item['GoalCode'] == int(s['GoalCode']))
     s_card = build_series_card(s)
 
     if property_update_only:
-        online_item = find_online_item(s_card['title'], online_username, gis_online_connection)
+        online_item = find_online_item(s_card['title'], 
+                                       online_username, 
+                                       gis_online_connection)
 
         if online_item is None:
             failed_series.append(s['SeriesCode'])
@@ -107,20 +110,36 @@ for s in selected_series:
             if(update_symbology):
                 generate_renderer_infomation(feature_item=online_item,
                                              statistic_field = 'Latest_Value',
-                                             layer_info,
-                                             color=series['rgb'])     
+                                             layer_info = layer_info,
+                                             color=s_color['rgb'])     
     else:
         
         online_item = publish_csv(s, 
                                   item_properties=s_card,
                                   thumbnail=s_color['iconUrl'],
-                                  layer_info,
-                                  gis_online_connection,
+                                  layer_info = layer_info, 
+                                  gis_online_connection= gis_online_connection,
                                   statistic_field = 'Latest_Value',
                                   property_update_only=False, 
                                   color=s_color["rgb"])
+    
+    #Only set the sharing when updating or publishing
+    if online_item is not None:
+        if update_sharing:
+            # Share this content with the open data group
+            online_item.share(everyone=False, 
+                              org=True, 
+                              groups=open_data_group["id"],
+                              allow_members_to_edit=False)
+
+        display(online_item)
+        # Update the Group Information with Data from the Indicator and targets
+        update_item_categories(online_item,s["GoalCode"], 
+                               s["TargetCode"])
+
+        #open_data_group.update(tags=open_data_group["tags"] + [series["code"]])
+    else:
+        failed_series.append(s["SeriesCode"])
+
         
         
-   
-    
-    

@@ -2,6 +2,9 @@ import sys
 import getpass
 from arcgis.gis import GIS
 import json
+import copy
+import requests
+
 
 #----------------------------------------------------------------
 
@@ -297,4 +300,44 @@ def analyze_csv(item_id, gis_online_connection):
     except:
         print("Unexpected error:", sys.exc_info()[0])
         return None
+    
+#------------------------------------------------------------------------------
+        
+def set_field_alias(field_name):
+    if field_name == "SeriesRelease":
+        return "Series Release"
+    if field_name == "SeriesCode":
+        return "Series Code"
+    if field_name == "SeriesDesc":
+        return "Series Description"
+    if field_name == "GeoArea_Code":
+        return "Geographic Area Code"
+    if field_name == "GeoArea_Desc":
+        return "Geographic Area Name"
+    if field_name == "Latest_Year":
+        return "Latest Year"
+    if field_name == "Latest_Value":
+        return "Latest Value"
+    if field_name == "last_5_years_mean":
+        return "Mean of the Last 5 Years"
+    if field_name == "ISO3CD":
+        return "ISO3 Code"
+    if field_name == "GoalCode":
+        return "Goal Code"
+    if field_name == "GoalDesc":
+        return "Goal Description"
+    if field_name == "TargetCode":
+        return "Target Code"
+    if field_name == "TargetDesc"
+        return "Target Description"
+    if field name == "IndicatorCode"
+        return "Indicator Code"
+    if field name == "IndicatorDesc"
+        return "Indicator Description"
+    if field name == "IndicatorTier"
+        return "Indicator Tier"
+    else:
+        return field_name.capitalize().replace("_", " ")
+    
+    
     
