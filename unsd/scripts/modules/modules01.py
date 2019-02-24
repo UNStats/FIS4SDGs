@@ -15,7 +15,7 @@ def get_series_metadata(file, print_first_element = True):
     try:
         series_metadata = json.load(open(file))
         if(print_first_element==True):
-            print("/n----This is an example of a series_metadata element----")
+            print("\n----This is an example of a series_metadata element----")
             print(series_metadata[0])
         return series_metadata
     
