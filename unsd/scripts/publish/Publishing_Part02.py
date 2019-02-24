@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 
 #--------------------------------------------
 # Set up the global information and variables
@@ -20,6 +21,7 @@ failed_series = []
 
 property_update_only = False
 update_symbology = True
+update_sharing = True
 
 #--------------------------------------------
 # Set path to data and metadata directories in
@@ -60,7 +62,7 @@ user_items = user.items(folder='Open Data', max_items=800)
 # CLEANUP
 #=============================================
 
-#cleanup_staging_folder(user_items)
+cleanup_staging_folder(user_items)
 
 #=======================
 #'''''''''''''''''''''''
@@ -88,7 +90,7 @@ layer_info = json.load(open(metadata_dir + 'layerinfo.json'))
 #=============================================
 
 selected_series = list()
-selected_series = series_metadata[:][0:4]
+selected_series = series_metadata[:]
 
 for s in selected_series:
     
@@ -114,11 +116,13 @@ for s in selected_series:
                                              color=s_color['rgb'])     
     else:
         
-        online_item = publish_csv(s, 
+        online_item = publish_csv(series_metadata_item = s, 
                                   item_properties=s_card,
                                   thumbnail=s_color['iconUrl'],
-                                  layer_info = layer_info, 
+                           online_item       layer_info = layer_info, 
                                   gis_online_connection= gis_online_connection,
+                                  data_dir = data_dir,
+                                  online_username = online_username,
                                   statistic_field = 'Latest_Value',
                                   property_update_only=False, 
                                   color=s_color["rgb"])
@@ -134,8 +138,10 @@ for s in selected_series:
 
         display(online_item)
         # Update the Group Information with Data from the Indicator and targets
-        update_item_categories(online_item,s["GoalCode"], 
-                               s["TargetCode"])
+        update_item_categories(online_item,
+                               s["GoalCode"], 
+                               s["TargetCode"],
+                               gis_online_connection)
 
         #open_data_group.update(tags=open_data_group["tags"] + [series["code"]])
     else:
