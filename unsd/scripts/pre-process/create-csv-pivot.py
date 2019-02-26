@@ -1,34 +1,156 @@
-import csv
+import sys
+import json
 import pandas as pd
-import os
-import fnmatch
+import csv
 import numpy as np
 
-os.chdir('C:\\Users\\L.GonzalezMorales\\Documents\\GitHub\\FIS4SDGs\\unsd\\data\\csv\\') 
+#--------------------------------------------
+# Set up the global information and variables
+#--------------------------------------------
 
-#-------------------------------------------------------
-# Get the list of all available csv files in long format
-#-------------------------------------------------------
+global data_dir                # Directory where csv files are located
+global metadata_dir            # Directory where meatadata files are located
 
-long_files = []
+#=============================================
+# INPUT USER PARAMETERS
+#=============================================
+property_update_only = False
+update_symbology = True
 
-listOfFiles = os.listdir('.')  
-pattern = "*_long.csv"  
-for entry in listOfFiles:  
-    if fnmatch.fnmatch(entry, pattern):
-        long_files.append(entry)
-        
+#--------------------------------------------
+# Set path to data and metadata directories in
+# the local branch 
+#--------------------------------------------
+
+data_dir = r"../../data/csv/"
+metadata_dir = r"../../"
+modules_dir = r"../modules/"
+
+#=============================================
+# IMPORT MODULES
+#=============================================
+
+sys.path.append(modules_dir)
+# sys.path
+
+from modules01 import *
+
+from modules03 import *
+
+#=============================================
+# GET METADATA
+#=============================================
+
+long_files = get_file_catalog(data_dir, pattern = '*_long.csv')
+
+       
 wide_files = []        
 for f in long_files:
     wide_files.append(f.replace("long", "wide"))
+
+
+regions_catalog = []
+cities_catalog=[]
+
+#-----------------------------------------------------------------------------
+# Analyze long file to get regions and cities catalogs
+#-----------------------------------------------------------------------------
+
+for i in range(len(long_files)):
+
+    f = long_files[i]
+    #f = '10.a.1-TM_TRF_ZERO_long.csv'
+    
+    
+    long_data = []
+    with open(data_dir+f, newline = '') as dataTable:                                                                                          
+        dataTable = csv.DictReader(dataTable, delimiter=',')
+        for row in dataTable:
+            long_data.append(dict(row))
+            
+    if not long_data:
+        print(f + ' contains no data')
+        continue
+    
+    
+    long_df = pd.DataFrame.from_records(long_data)
+    
+    long_df.Year = long_df.Year.astype(float).astype(int)
+    
+    long_df[['Year']].drop_duplicates()
+    
+    
+    #-------------------------------------------------------
+    # create vectors identifying Series, Geo, Dimensions, Attributes
+    #-------------------------------------------------------
+    
+    series_cols = ['GoalCode', 'GoalDesc', 
+                    'TargetCode', 'TargetDesc', 
+                    'IndicatorCode','IndicatorDesc', 'IndicatorTier', 
+                    'SeriesCode', 'SeriesDesc','SeriesRelease', 'Units_Code',
+                    'Units_Desc']
+    
+    geo_cols = ['GeoArea_Code', 'GeoArea_Desc', 'ISO3CD', 'X', 'Y']
+    
+    #drop ISO3D, X, and Y if not present:
+    geo_cols = [x for x in geo_cols if x in list(long_df.columns)] 
+    
+    
+    notes_cols = ['Nature_Code','Nature_Desc','Source','Footnotes','TimeDetail']
+        
+    dimension_columns = list(long_df.columns)
+    dimension_columns = [x for x in dimension_columns if x not in series_cols]   
+    dimension_columns = [x for x in dimension_columns if x not in geo_cols]   
+    dimension_columns = [x for x in dimension_columns if x not in notes_cols] 
+    dimension_columns = [x for x in dimension_columns if x not in ('Value', 'ValueType', 'Year')]     
+      
+    
+    key_cols = series_cols + geo_cols + dimension_columns
+    
+    slice_cols = series_cols + dimension_columns
+    
+    #------------------------------------------------------
+    # Build list of regions contained in the current csv
+    #------------------------------------------------------
+    
+    x = long_df[geo_cols].drop_duplicates().copy()
+    if {'X'}.issubset(list(x.columns)):
+        x = x.loc[(x['X'] == "") & (~x['GeoArea_Code'].isin(['412','729']))]
+    regions_catalog.append(x[['GeoArea_Code','GeoArea_Desc']])
+    
+    
+    #------------------------------------------------------
+    # Build list of cities contained in the current csv
+    #------------------------------------------------------
+    if {'Cities_Code','Cities_Desc'}.issubset(list(long_df.columns)):
+        x = long_df[geo_cols+['Cities_Code','Cities_Desc']].drop_duplicates().copy()
+        x = x.loc[(x['Cities_Code'] != "NOCITI")]
+        cities_catalog.append(x[['GeoArea_Code','GeoArea_Desc','ISO3CD','Cities_Code','Cities_Desc']])
+        
+    print('finished analyzing series ' + f + ' to create regions catalog')
     
 
+
+# see pd.concat documentation for more info
+if cities_catalog:
+    cities_catalog = pd.concat(cities_catalog).drop_duplicates()
+    cities_catalog['GeoArea_Code'] = cities_catalog['GeoArea_Code'].astype('int')
+    cities_catalog = cities_catalog.sort_values(by=['GeoArea_Code'])
+    cities_catalog['GeoArea_Code'] = cities_catalog['GeoArea_Code'].astype('str')
+
+regions_catalog = pd.concat(regions_catalog).drop_duplicates()
+regions_catalog['GeoArea_Code'] = regions_catalog['GeoArea_Code'].astype('int')
+regions_catalog = regions_catalog.sort_values(by=['GeoArea_Code'])
+regions_catalog['GeoArea_Code'] = regions_catalog['GeoArea_Code'].astype('str')
+
+
+#====================================================================================
 #-----------------------------------------------------------------------------
 # List of countreis to be plotted on a map (with XY coordinates)
 #------------------------------------------- ----------------------------------
 
 countryListXY = []
-with open('..\\..\\CountryListXY.txt', newline = '') as countryList:                                                                                          
+with open(metadata_dir+'CountryListXY.txt', newline = '') as countryList:                                                                                          
     countryList = csv.DictReader(countryList, delimiter='\t')
     for row in countryList:
         countryListXY.append(dict(row))
@@ -36,141 +158,97 @@ with open('..\\..\\CountryListXY.txt', newline = '') as countryList:
 country_df = pd.DataFrame.from_records(countryListXY)
 
 country_df.rename(columns={'geoAreaCode': 'GeoArea_Code', 'geoAreaName': 'GeoArea_Desc'}, inplace=True)
-  
-#-------------------------------------------------------
 
 
+#-----------------------------------------------------------------------------
+# Analyze long file
+#-----------------------------------------------------------------------------
 
-for i in range(len(long_files)):
+
+for i in range(119,len(long_files)):
+    
+    print('\nProcessing ' + str(i) + ' of ' + str(len(long_files)))
     
     f = long_files[i]
-    #f = '1.1.1-SI_POV_EMP1_long.csv'
-
-    with open(f) as filename:
-        reader = csv.reader(filename)
-        data = list(reader)
-        
-    header = data[0]
+    #f = '10.a.1-TM_TRF_ZERO_long.csv'
     
-    if(len(data)>1):
-        long_df = pd.DataFrame.from_records(data[1:])
-        long_df.columns = header
-        long_df.Year = long_df.Year.astype(float).astype(int)
-        #-------------------------------------------------------
-        # create vector with columns that identify unique slices
-        #-------------------------------------------------------
-        
-        index_c = header
-        # Remove values that will be pivoted:
-        index_c.remove('Year')
-        index_c.remove('Value')
-        index_c.remove('Nature_Code')
-        index_c.remove('Source')
-        index_c.remove('Footnotes')
-        index_c.remove('TimeDetail')
-        # Drop nature description and value type:
-        index_c.remove('Nature_Desc')
-        index_c.remove('ValueType')
-        # What remains is the key that identifies unique "sclices" in the pivot table
-        
-        #--------------------------------------------------------
-        # Select the most recent observatoin available for each
-        # slice
-        #--------------------------------------------------------
-        
-        idx = long_df.groupby(index_c)['Year'].transform(max) == long_df['Year']
+    pivot_file_name = 'region_' + wide_files[i]
 
-        latest_df = long_df[idx]
-        
-        latest_df.rename(columns={'Year': 'Latest_Year', 'Value': 'Latest_Value'}, inplace=True)
+
+    long_data = []
+    with open(data_dir+f, newline = '') as dataTable:                                                                                          
+        dataTable = csv.DictReader(dataTable, delimiter=',')
+        for row in dataTable:
+            long_data.append(dict(row))
+            
+    if not long_data:
+        print(f + ' contains no data')
+        continue
     
-        #-------------------------------------------------------
-        # Create pivot table
-        #-------------------------------------------------------
+    long_data[0]
+    
+    long_df = pd.DataFrame.from_records(long_data)
+    
+    long_df.Year = long_df.Year.astype(float).astype(int)
+    
+    long_df[['Year']].drop_duplicates()
+    
+    
+    #-------------------------------------------------------
+    # create vectors identifying Series, Geo, Dimensions, Attributes
+    #-------------------------------------------------------
+    
+    series_cols = ['GoalCode', 'GoalDesc', 
+                    'TargetCode', 'TargetDesc', 
+                    'IndicatorCode','IndicatorDesc', 'IndicatorTier', 
+                    'SeriesCode', 'SeriesDesc','SeriesRelease', 'Units_Code',
+                    'Units_Desc']
+    
+    geo_cols = ['GeoArea_Code', 'GeoArea_Desc', 'ISO3CD', 'X', 'Y']
+    geo_cols2 = ['GeoArea_Code', 'GeoArea_Desc']
+    
+    #drop ISO3D, X, and Y if not present:
+    geo_cols = [x for x in geo_cols if x in list(long_df.columns)] 
+    
+    
+    notes_cols = ['Nature_Code','Nature_Desc','Source','Footnotes','TimeDetail']
         
-        pivot_table = pd.pivot_table(long_df,
-                                     index=index_c,
-                                     columns = ['Year'],
-                                     values = ['Value','Nature_Code', 'Source', 'Footnotes', 'TimeDetail'],
-                                     aggfunc = lambda x: ''.join(str(v) for v in x))
-        
-        pivot_table = pivot_table.replace(np.nan, '', regex=True)
-        #------------------------------------------------------
-        # Define new column headings (since this is multi-index)
-        #------------------------------------------------------
-        
-        new_header = index_c[:] 
-        
-        header_elements = pivot_table.columns
-        for c in header_elements:
-            new_header.append(c[0]+"_"+ str(c[1]))
-        
-        
-        pivot_table = pivot_table.reset_index()
-        
-        pivot_table.columns = [''.join(str(col)).strip() for col in pivot_table.columns.values]
-        
-        pivot_table.columns = new_header
-        
-        #-------------------------------------------------------
-        # Add latest year columns to pivot table
-        #-------------------------------------------------------
-                
-        pivot_2 = pd.merge(pivot_table, latest_df[index_c +['Latest_Year','Latest_Value']], how='outer', on=index_c)
-             
-        
-        #-------------------------------------------------------
-        # Add countries without data (so they can be displayed on a map)
-        #-------------------------------------------------------
-        
-        error_log = []
-        
-        try:
-            
-            country_part =  ['ISO3CD','X', 'Y', 'GeoArea_Code', 'GeoArea_Desc']
-            
-            slice_part = [x for x in index_c if x not in country_part]
-            
-            slice_key = pivot_2[slice_part].copy()
-            slice_key = slice_key.drop_duplicates()
-            
-            country_key = pivot_2[country_part].copy()
-            country_key = country_key.drop_duplicates()
-            
-            # Add 
-            
-            country_key = country_key.append(country_df[country_part]).drop_duplicates()
-            #--------------------------------------------------------
-                
-            def cartesian_product_basic(left, right):
-                return (
-                   left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
-            
-            full_key = cartesian_product_basic(country_key,slice_key)
-            
-            #  export_csv = x.to_csv ('test_cartesian.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
-           
-           
-            pivot_3 = pd.merge(full_key, pivot_2, how='left', on=index_c)
-                 
+    dimension_columns = list(long_df.columns)
+    dimension_columns = [x for x in dimension_columns if x not in series_cols]   
+    dimension_columns = [x for x in dimension_columns if x not in geo_cols]   
+    dimension_columns = [x for x in dimension_columns if x not in notes_cols] 
+    dimension_columns = [x for x in dimension_columns if x not in ('Value', 'ValueType', 'Year')]     
+      
+    
+    key_cols = series_cols + geo_cols + dimension_columns
+    key_cols2 = series_cols + geo_cols2 + dimension_columns
+    
+    slice_cols = series_cols + dimension_columns
+    
+    has_cities = {'Cities_Code','Cities_Desc'}.issubset(dimension_columns)
+    
+    long_df_regions = pd.merge(regions_catalog, 
+                           long_df,
+                           how='left', 
+                           on=geo_cols2)
+    
+
+    has_regions = pd.merge(regions_catalog[['GeoArea_Code']], 
+                           long_df[['GeoArea_Code']],
+                           how='inner', 
+                           on='GeoArea_Code')
+    
        
-            #-------------------------------------------------------
-            # Export to csv file
-            #-------------------------------------------------------
-            
-            export_csv = pivot_3.to_csv (wide_files[i], 
-                                         index = None, 
-                                         header=True,
-                                         encoding='utf-8',
-                                         quoting=csv.QUOTE_NONNUMERIC)
-            #------------------------------------------------------
-            
-            
-            print("====FINISHED PIVOTING FILE " + f + "(" + str(i) + " of " + str(len(long_files)) + ")")
-        
+    if not has_regions.empty:
+        pivot(f, regions_catalog, long_df_regions, geo_cols2,key_cols2,slice_cols, 'reg_'+wide_files[i] ) 
+    
+    if has_cities:
+        pivot(f, country_df.loc[country_df['X'] !=''], 
+              long_df.loc[ (long_df['Cities_Code'] == "NOCITI") & (long_df['X'] !='')], geo_cols,key_cols,slice_cols, 'country_'+wide_files[i] ) 
+    else:
+        if {'X'}.issubset(list(long_df.columns)):
+            pivot(f, country_df,  long_df.loc[ (long_df['X'] !='')], geo_cols,key_cols,slice_cols, 'country_'+wide_files[i] ) 
 
-        except:
-            
-            print('===== ' + f + ' COULD NOT BE WRITTEN TO PIVOT FILE=====')
-            error_log.append(f)
-            
+    
+    
+   
