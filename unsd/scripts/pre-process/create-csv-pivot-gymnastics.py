@@ -68,10 +68,10 @@ country_df.rename(columns={'geoAreaCode': 'GeoArea_Code', 'geoAreaName': 'GeoAre
 #-----------------------------------------------------------------------------
 
 
-for i in range(len(long_files)):
+for i in range(166,len(long_files)):
     
     f = long_files[i]
-    #f = '1.1.1-SI_POV_EMP1_long.csv'
+    #f = '10.a.1-TM_TRF_ZERO_long.csv'
 
 
     long_data = []
@@ -79,6 +79,10 @@ for i in range(len(long_files)):
         dataTable = csv.DictReader(dataTable, delimiter=',')
         for row in dataTable:
             long_data.append(dict(row))
+            
+    if not long_data:
+        print(f + ' contains no data')
+        continue
     
     long_data[0]
     
@@ -86,9 +90,8 @@ for i in range(len(long_files)):
     
     long_df.Year = long_df.Year.astype(float).astype(int)
     
-    long_df.columns
-    
     long_df[['Year']].drop_duplicates()
+    
     
     #-------------------------------------------------------
     # create vectors identifying Series, Geo, Dimensions, Attributes
@@ -101,6 +104,9 @@ for i in range(len(long_files)):
                     'Units_Desc']
     
     geo_cols = ['GeoArea_Code', 'GeoArea_Desc', 'ISO3CD', 'X', 'Y']
+    
+    #drop ISO3D, X, and Y if not present:
+    geo_cols = [x for x in geo_cols if x in list(long_df.columns)] 
     
     
     notes_cols = ['Nature_Code','Nature_Desc','Source','Footnotes','TimeDetail']
@@ -131,23 +137,25 @@ for i in range(len(long_files)):
     
     footnotes_df = pd.DataFrame(footnotes)
     
-    footnotes = []
-    grouped_by_fn_2 = footnotes_df.groupby(key_cols)
-    for  name, group in grouped_by_fn_2:
-        
-        fn_key = group[key_cols].drop_duplicates().to_dict('records')
-        group_shape = group.shape
-        if group_shape[0] == 1 :
-            x = group['Footnotes'].values[0]
-        else:
-            x = group[['FN_range', 'Footnotes']].apply(lambda x: ': '.join(x), axis=1).values
-            x = ' // '.join(map(str, x)) 
+    if not footnotes_df.empty:
+
+        footnotes = []
+        grouped_by_fn_2 = footnotes_df.groupby(key_cols)
+        for  name, group in grouped_by_fn_2:
             
-        fn_key[0]['Footnote'] = x
-        footnotes = footnotes + fn_key
+            fn_key = group[key_cols].drop_duplicates().to_dict('records')
+            group_shape = group.shape
+            if group_shape[0] == 1 :
+                x = group['Footnotes'].values[0]
+            else:
+                x = group[['FN_range', 'Footnotes']].apply(lambda x: ': '.join(x), axis=1).values
+                x = ' // '.join(map(str, x)) 
+                
+            fn_key[0]['Footnote'] = x
+            footnotes = footnotes + fn_key
+            
         
-    
-    footnotes_df = pd.DataFrame(footnotes)
+        footnotes_df = pd.DataFrame(footnotes)
     #-------------------------------------------------------
     # Prepare sources for pivoting
     #-------------------------------------------------------
@@ -163,22 +171,24 @@ for i in range(len(long_files)):
     
     sources_df = pd.DataFrame(sources)
     
-    sources = []
-    grouped_by_sr_2 = sources_df.groupby(key_cols)
-    for  name, group in grouped_by_sr_2:
-        
-        sr_key = group[key_cols].drop_duplicates().to_dict('records')
-        group_shape = group.shape
-        if group_shape[0] == 1 :
-            x = group['Source'].values[0]
-        else:
-            x = group[['Source_range', 'Source']].apply(lambda x: ': '.join(x), axis=1).values
-            x = ' // '.join(map(str, x)) 
+    if not sources_df.empty:
+
+        sources = []
+        grouped_by_sr_2 = sources_df.groupby(key_cols)
+        for  name, group in grouped_by_sr_2:
             
-        sr_key[0]['Source'] = x
-        sources = sources + sr_key
-        
-    sources_df = pd.DataFrame(sources)
+            sr_key = group[key_cols].drop_duplicates().to_dict('records')
+            group_shape = group.shape
+            if group_shape[0] == 1 :
+                x = group['Source'].values[0]
+            else:
+                x = group[['Source_range', 'Source']].apply(lambda x: ': '.join(x), axis=1).values
+                x = ' // '.join(map(str, x)) 
+                
+            sr_key[0]['Source'] = x
+            sources = sources + sr_key
+            
+        sources_df = pd.DataFrame(sources)
     #-------------------------------------------------------
     # Prepare nature for pivoting
     #-------------------------------------------------------
@@ -194,23 +204,25 @@ for i in range(len(long_files)):
     
     nature_df = pd.DataFrame(nature)
     
-    nature = []
-    grouped_by_nt_2 = nature_df.groupby(key_cols)
-    for  name, group in grouped_by_nt_2:
+    if not nature_df.empty:
         
-        nt_key = group[key_cols].drop_duplicates().to_dict('records')
-        group_shape = group.shape
-        if group_shape[0] == 1 :
-            x = group['Nature_Desc'].values[0]
-        else:
-            x = group[['Nature_range', 'Nature_Desc']].apply(lambda x: ': '.join(x), axis=1).values
-            x = ' // '.join(map(str, x)) 
+        nature = []
+        grouped_by_nt_2 = nature_df.groupby(key_cols)
+        for  name, group in grouped_by_nt_2:
             
-        nt_key[0]['Nature'] = x
-        nature = nature + nt_key
-        
-        
-    nature_df = pd.DataFrame(nature)
+            nt_key = group[key_cols].drop_duplicates().to_dict('records')
+            group_shape = group.shape
+            if group_shape[0] == 1 :
+                x = group['Nature_Desc'].values[0]
+            else:
+                x = group[['Nature_range', 'Nature_Desc']].apply(lambda x: ': '.join(x), axis=1).values
+                x = ' // '.join(map(str, x)) 
+                
+            nt_key[0]['Nature'] = x
+            nature = nature + nt_key
+            
+            
+        nature_df = pd.DataFrame(nature)
     
     
     #-------------------------------------------------------
@@ -271,28 +283,44 @@ for i in range(len(long_files)):
                        how='outer', 
                        on=key_cols)
     
-    pivot_3 = pd.merge(pivot_2, 
-                       nature_df, 
-                       how='outer', 
-                       on=key_cols)
+    #--------------------------------------------------------
+    slice_key = pivot_2[slice_cols].copy()
+    slice_key = slice_key.drop_duplicates()
+    
+    country_key = pivot_2[geo_cols].copy()
+    country_key = country_key.drop_duplicates()
+    
+    # Add 
+    
+    country_key = country_key.append(country_df[geo_cols]).drop_duplicates()
+    
+      
+    def cartesian_product_basic(left, right):
+        return (
+           left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
+    
+    full_key = cartesian_product_basic(country_key,slice_key)
+    
+    #--------------------------------------------------------
+    
+    if not nature_df.empty:
+        pivot_2 = pd.merge(pivot_2, 
+                           nature_df, 
+                           how='outer', 
+                           on=key_cols)
     
     
-    pivot_4 = pd.merge(pivot_3, 
-                       sources_df, 
-                       how='outer', 
-                       on=key_cols)
+    if not sources_df.empty:
+        pivot_2 = pd.merge(pivot_2, 
+                           sources_df, 
+                           how='outer', 
+                           on=key_cols)
          
-    
-    pivot_5 = pd.merge(pivot_4, 
-                       footnotes_df, 
-                       how='outer', 
-                       on=key_cols)
-    
-    export_csv = pivot_5.to_csv ('test_pivot.csv', 
-                                             index = None, 
-                                             header=True,
-                                             encoding='utf-8',
-                                             quoting=csv.QUOTE_NONNUMERIC)
+    if not footnotes_df.empty:
+        pivot_2 = pd.merge(pivot_2, 
+                           footnotes_df, 
+                           how='outer', 
+                           on=key_cols)
     
     
     #-------------------------------------------------------
@@ -303,34 +331,15 @@ for i in range(len(long_files)):
     
     try:
         
-        slice_key = pivot_2[slice_cols].copy()
-        slice_key = slice_key.drop_duplicates()
-        
-        country_key = pivot_2[geo_cols].copy()
-        country_key = country_key.drop_duplicates()
-        
-        # Add 
-        
-        country_key = country_key.append(country_df[geo_cols]).drop_duplicates()
-        #--------------------------------------------------------
-            
-        def cartesian_product_basic(left, right):
-            return (
-               left.assign(key=1).merge(right.assign(key=1), on='key').drop('key', 1))
-        
-        full_key = cartesian_product_basic(country_key,slice_key)
-        
-        #  export_csv = x.to_csv ('test_cartesian.csv', index = None, header=True) #Don't forget to add '.csv' at the end of the path
        
-       
-        pivot_6 = pd.merge(full_key, pivot_5, how='left', on=key_cols)
+        pivot_2 = pd.merge(full_key, pivot_2, how='left', on=key_cols)
              
        
         #-------------------------------------------------------
         # Export to csv file
         #-------------------------------------------------------
         
-        export_csv = pivot_6.to_csv (data_dir + wide_files[i], 
+        export_csv = pivot_2.to_csv (data_dir + wide_files[i], 
                                      index = None, 
                                      header=True,
                                      encoding='utf-8',

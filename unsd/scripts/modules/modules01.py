@@ -5,6 +5,7 @@ import fnmatch
 import getpass
 from arcgis.gis import GIS
 import json
+import pandas as pd
 
 #---------------------------------------------------------------
 
@@ -195,4 +196,41 @@ def year_intervals (years_list):
     
     x = ",".join(interval_yy)
     return(x)
+
+#-------------------------------------------------------------------
+  
+def collapse_footnotes(df, key_cols, footnote_coln, year_coln):
+    """ collapse footnotes for pivoting"""
+    grouped_by_fn = df[key_cols +  [year_coln,footnote_coln]].groupby(key_cols + [footnote_coln])
     
+    footnotes = []
+    for  name, group in grouped_by_fn:
+        footnote_str =  list(group[footnote_coln])
+        if(len(footnote_str[0])>0):
+            fn_key = group[key_cols + [footnote_coln]].drop_duplicates().to_dict('records')
+            fn_key[0][footnote_coln + '_range'] = '[' + year_intervals(list(group[year_coln])) + ']'
+            footnotes = footnotes + fn_key
+    
+    footnotes_df = pd.DataFrame(footnotes)
+    
+    if not footnotes_df.empty:
+
+        footnotes = []
+        grouped_by_fn_2 = footnotes_df.groupby(key_cols)
+        for  name, group in grouped_by_fn_2:
+            
+            fn_key = group[key_cols].drop_duplicates().to_dict('records')
+            group_shape = group.shape
+            if group_shape[0] == 1 :
+                x = group[footnote_coln].values[0]
+            else:
+                x = group[[footnote_coln+'_range', footnote_coln]].apply(lambda x: ': '.join(x), axis=1).values
+                x = ' // '.join(map(str, x)) 
+                
+            fn_key[0][footnote_coln] = x
+            footnotes = footnotes + fn_key
+            
+        
+        footnotes_df = pd.DataFrame(footnotes)
+    
+    return(footnotes_df)
