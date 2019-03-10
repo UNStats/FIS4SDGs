@@ -39,7 +39,7 @@ from modules01 import *
 
 series_metadata = get_series_metadata(metadata_dir + "metadata.json")
 
-wide_files = get_file_catalog(data_dir, pattern = '*_wide.csv')
+wide_files = get_file_catalog(data_dir, pattern = 'country_*_wide.csv')
 
 key_list = ['GoalCode', 'GoalDesc',
             'TargetCode', 'TargetDesc', 

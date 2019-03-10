@@ -76,7 +76,7 @@ cleanup_staging_folder(user_items)
 #=============================================
 
 # 1. csv metadata
-series_metadata = get_series_metadata(metadata_dir + 'unsd_metadata_20190223.json')
+series_metadata = get_series_metadata(metadata_dir + 'unsd_metadata.json')
 
 # 2. sdg_colors and icons
 sdg_colors = get_series_metadata(metadata_dir + 'sdg_colors.json')
@@ -92,7 +92,7 @@ layer_info = json.load(open(metadata_dir + 'layerinfo.json'))
 selected_series = list()
 selected_series = series_metadata[:]
 
-for s in selected_series[89:]:
+for s in selected_series[138:]:
     
     print("\nProcessing series code:", s["IndicatorCode"], s["SeriesCode"])
     s_color = next(item for item in sdg_colors if item['GoalCode'] == int(s['GoalCode']))
