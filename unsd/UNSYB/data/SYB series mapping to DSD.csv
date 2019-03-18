@@ -1,17 +1,17 @@
 ﻿SELECT,seriesCode,countryAttributeId,seriesId,seriesName,sourceId,tableId,newSeriesName,units,multiplier,baseYear,dim_expenditureType,dim_pesonnelType,dim_industry,dim_typeOfSpecies,dim_typeOfODA,dim_location,dim_ageGroup,dim_sex,dim_educationLevel
-,%ger_pri_M,,1641,Gross enrollement ratio - Primary (male),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,MALE,Primary
-,%gre_pri_F,,1629,Gross enrollment ratio - Primary (female),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,FEMALE,Primary
-,%ger_sec_F,,1642,Gross enrollment ratio - Secondary (female),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,FEMALE,Secondary
-,%ger_sec_M,,1630,Gross enrollment ratio - Secondary (male),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,MALE,Secondary
-,%gre_ter_F,,1643,Gross enrollment ratio - Tertiary (female),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,FEMALE,Tertiary
-,%ger_ter_M,,1631,Gross enrollment ratio - Tertiary (male),24,1,Gross enrollment ratio,Ratio,,,,,,,,,,MALE,Tertiary
-,tot-prim,,82,Students enrolled in primary education (thousands),24,1,Number of students enrolled,Number,3,,,,,,,,,BOTH,Primary
-,tot-sec,,84,Students enrolled in secondary education (thousands),24,1,Number of students enrolled,Number,3,,,,,,,,,BOTH,Secondary
-,tot-ter,,86,Students enrolled in tertiary education (thousands),24,1,Number of students enrolled,Number,3,,,,,,,,,BOTH,Tertiary
-,Invertebr,,387,Threatened Species: Invertebrates (number),41,5,Threatened species,Number,,,,,,Invertebrates,,,,,
-,T-Plant,,390,Threatened Species: Plants (number),41,5,Threatened species,Number,,,,,,Plants,,,,,
-,T-Total,,391,Threatened Species: Total (number),41,5,Threatened species,Number,,,,,,Total,,,,,
-,vertebr,,10,Threatened Species: Vertebrates (number),41,5,Threatened species,Number,,,,,,Vertebrates,,,,,
+,%ger_pri_M,,1641,Gross enrollement ratio - Primary (male),24,1,Gross education enrollment ratio,Ratio,,,,,,,,,,MALE,Primary
+,%gre_pri_F,,1629,Gross enrollment ratio - Primary (female),24,1,Gross educatoin enrollment ratio,Ratio,,,,,,,,,,FEMALE,Primary
+,%ger_sec_F,,1642,Gross enrollment ratio - Secondary (female),24,1,Gross educatoin enrollment ratio,Ratio,,,,,,,,,,FEMALE,Secondary
+,%ger_sec_M,,1630,Gross enrollment ratio - Secondary (male),24,1,Gross educatoin enrollment ratio,Ratio,,,,,,,,,,MALE,Secondary
+,%gre_ter_F,,1643,Gross enrollment ratio - Tertiary (female),24,1,Gross educatoin enrollment ratio,Ratio,,,,,,,,,,FEMALE,Tertiary
+,%ger_ter_M,,1631,Gross enrollment ratio - Tertiary (male),24,1,Gross educatoin enrollment ratio,Ratio,,,,,,,,,,MALE,Tertiary
+,tot-prim,,82,Students enrolled in primary education (thousands),24,1,Number of students enrolled in formal education,Number of students,3,,,,,,,,,BOTH,Primary
+,tot-sec,,84,Students enrolled in secondary education (thousands),24,1,Number of students enrolled in formal education,Number of students,3,,,,,,,,,BOTH,Secondary
+,tot-ter,,86,Students enrolled in tertiary education (thousands),24,1,Number of students enrolled in formal education,Number of students,3,,,,,,,,,BOTH,Tertiary
+,Invertebr,,387,Threatened Species: Invertebrates (number),41,5,Threatened species,Number of species,,,,,,Invertebrates,,,,,
+,T-Plant,,390,Threatened Species: Plants (number),41,5,Threatened species,Number of species,,,,,,Plants,,,,,
+,T-Total,,391,Threatened Species: Total (number),41,5,Threatened species,Number of species,,,,,,Total,,,,,
+,vertebr,,10,Threatened Species: Vertebrates (number),41,5,Threatened species,Number of species,,,,,,Vertebrates,,,,,
 ,RD-%GDP,,1393,Gross domestic expenditure on R & D: as a percentage of GDP (%),76,6,Gross domestic expenditure on R & D as a percentage of GDP,Percent,,,,,,,,,,,
 ,RD-BusEnt,,204,Gross domestic expenditure on R & D: Business enterprises (%),76,6,Gross domestic expenditure on R & D: Business enterprises,Percent,,,,,,,,,,,
 ,RD-Abroad,,205,Gross domestic expenditure on R & D: Funds from abroad (%),76,6,Gross domestic expenditure on R & D: Funds from abroad,Percent,,,,,,,,,,,
@@ -110,10 +110,10 @@ X,Curr_acct,,1355,Balance of Payments: Current account (millions of US dollars),
 X,Fin_acct,,17,Balance of Payments: Financial account (millions of US dollars),16,74,Balance of Payments: Financial account,US dollars,6,,,,,,,,,,
 X,endperiod,0,165,Exchange rates: end of period (national currency per US dollar) ,96,75,Exchange rate: end of period,National currency per US dollar,,,,,,,,,,,
 X,periodave,0,166,Exchange rates: period average (national currency per US dollar),96,75,Exchange rate: period average,National currency per US dollar,,,,,,,,,,,
-,Biloda,,75,Net official development assistance received: Bilateral  (millions of US dollars),22,77,Net official development assistance received,US dollars,6,Bilateral,,,,,,,,,
-,Muloda,,76,Net official development assistance received: Multilateral (millions of US dollars),22,77,Net official development assistance received,US dollars,6,Multilateral,,,,,,,,,
-,GNI_%,,1555,Net official development assistance received: Total (as % GNI),22,77,Net official development assistance received as percent of GNI,Percent of GNI,,Total,,,,,,,,,
-,Bim-Tot,,77,Net official development assistance received: Total (millions of US dollars),22,77,Net official development assistance received,US dollars,6,Total,,,,,,,,,
+,Biloda,,75,Net official development assistance received: Bilateral  (millions of US dollars),22,77,Net official development assistance received,US dollars,6,,,,,,Bilateral,,,,
+,Muloda,,76,Net official development assistance received: Multilateral (millions of US dollars),22,77,Net official development assistance received,US dollars,6,,,,,,Multilateral,,,,
+,GNI_%,,1555,Net official development assistance received: Total (as % GNI),22,77,Net official development assistance received as percent of GNI,Percent of GNI,,,,,,,Total,,,,
+,Bim-Tot,,77,Net official development assistance received: Total (millions of US dollars),22,77,Net official development assistance received,US dollars,6,,,,,,Total,,,,
 ,asylsk,,1617,"Asylum seekers, including pending cases (number)",90,78,"Asylum seekers, including pending cases",Number,,,,,,,,,,,
 X,ims%tot,,1614,International migrant stock: Both sexes (% total population),89,78,International migrant stock as percent of total population,Percent of total population,,,,,,,,,,BOTH,
 X,MS:Total,,1610,International migrant stock: Both sexes (number),89,78,International migrant stock,Number,,,,,,,,,,BOTH,
@@ -122,12 +122,12 @@ X,ims%male,,1615,International migrant stock: Male (% total Population),89,78,In
 X,other,,1618,Other of concern to UNHCR (number),90,78,Other population of concern to UNHCR,Number,,,,,,,,,,,
 X,totpopunhc,,1619,Total population of concern to UNHCR (number),90,78,Total population of concern to UNHCR,Number,,,,,,,,,,,
 X,totrefugee,,1613,Total refugees and people in refugee-like situations (number),90,78,Total refugees and people in refugee-like situations,Number,,,,,,,,,,,
-X,Pop-AgT%,1,265,Capital city population (as a percentage of total population),31,83,Capital city population,Percentage of total population,,,,,,,,,,,
-X,Pop_AgUr%,1,266,Capital city population (as a percentage of total urban population),31,83,Capital city population,Percentage of total urban population,,,,,,,,,,,
+X,Pop-AgT%,1,265,Capital city population (as a percentage of total population),31,83,Capital city population as percent of total population,Percent of total population,,,,,,,,,,,
+X,Pop_AgUr%,1,266,Capital city population (as a percentage of total urban population),31,83,Capital city population as percent of total urban population,Percent of total urban population,,,,,,,,,,,
 X,Pop_Agg,1,264,Capital city population (thousands),31,83,Capital city population,Number,3,,,,,,,,,,
 X,Pop_Gr%,,329,Rural population (percent growth rate per annum),31,83,Population growth rate per annum,Percent,,,,,,,,Rural,,,
 X,Pop_Gu%,,330,Urban population (percent growth rate per annum),31,83,Population growth rate per annum,Percent,,,,,,,,Urban,,,
-X,Pop_Ur%,,328,Urban population (percent),31,83,Urban population,Percent of total population,,,,,,,,Urban,,,
+X,Pop_Ur%,,328,Urban population (percent),31,83,Urban population as percent of total populatoin,Percent of total population,,,,,,,,Urban,,,
 ,Water-%R,,3,"Improved drinking water sources, rural (Proportion of population with access)",42,84,Proportion of population with access to Improved drinking water sources,Percent,,,,,,,,Rural,,,
 ,Water-%T,,4,"Improved drinking water sources, total (Proportion of population with access)",42,84,Proportion of population with access to Improved drinking water sources,Percent,,,,,,,,Total,,,
 ,Water-%U,,2,"Improved drinking water sources, urban (Proportion of population with access)",42,84,Proportion of population with access to Improved drinking water sources,Percent,,,,,,,,Urban,,,
@@ -166,7 +166,7 @@ X,cpigeneral,,1607,Consumer price index: General,34,98,Consumer Price index: gen
 ,robbery,,1628,"Robbery at the national level, rate per 100,000 population																										",92,104,National robbery rate,"Incidents per 100,000 population",,,,,,,,,,,
 ,theft,,1627,"Theft at the national level, rate per 100,000 population																			",92,104,National theft rate,"Incidents per 100,000 population",,,,,,,,,,,
 ,sviolence,,1626,"Total Sexual Violence at the national level, rate per 100,000		",92,104,Total national sexual violence rate,"Incidents per 100,000 population",,,,,,,,,,,
-,int%,,1491,"Percentage of individuals using the internet 											",18,106,"Percentage of individuals using the internet 											",Percent,,,,,,,,,,,
+,int%,,1491,Percentage of individuals using the internet,18,106,Percentage of individuals using the internet,Percent,,,,,,,,,,,
 ,cell,,1368,Cellular mobile telephone subscriptions (number),18,107,Cellular mobile telephone subscriptions,Number,,,,,,,,,,,
 ,cell_100,,1367,Cellular mobile telephone subscriptions (per 100 inhabitants),18,107,Cellular mobile telephone subscriptions,Subscriptions per 100 inhabitants,,,,,,,,,,,
 ,staffcomp,,1638,"All staff compensation as % of total expenditure in public institutions (%)																",24,109,"Distribution of total expenditure in public institutions														",Percent,,,All staff compensation,,,,,,,,
