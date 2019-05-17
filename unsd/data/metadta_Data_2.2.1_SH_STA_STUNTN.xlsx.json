@@ -1,0 +1,104 @@
+{
+    "fileName": "Data_2.2.1_SH_STA_STUNTN.xlsx",
+    "goalCode": "2",
+    "goalDesc": "End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+    "targetCode": "2.2",
+    "targetDesc": "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons",
+    "indicatorCode": "2.2.1",
+    "indicatorDesc": "Prevalence of stunting (height for age <-2 standard deviation from the median of the World Health Organization (WHO) Child Growth Standards) among children under 5 years of age",
+    "indicatorTier": "1",
+    "seriesCode": "SH_STA_STUNTN",
+    "seriesDesc": "Children moderately or severely stunted (millions)",
+    "seriesRelease": "2019.Q1.G.02",
+    "slices": [
+        {
+            "ageCode": "<5Y",
+            "boundsCode": "UB",
+            "reportingTypeCode": "G",
+            "seriesCode": "SH_STA_STUNTN",
+            "unitmultiplierCode": "UNIT"
+        },
+        {
+            "ageCode": "<5Y",
+            "boundsCode": "LB",
+            "reportingTypeCode": "G",
+            "seriesCode": "SH_STA_STUNTN",
+            "unitmultiplierCode": "UNIT"
+        },
+        {
+            "ageCode": "<5Y",
+            "boundsCode": "MP",
+            "reportingTypeCode": "G",
+            "seriesCode": "SH_STA_STUNTN",
+            "unitmultiplierCode": "UNIT"
+        }
+    ],
+    "time_coverage": [
+        "2000",
+        "2005",
+        "2010",
+        "2015",
+        "2017"
+    ],
+    "geo_coverage_groups": [
+        {
+            "geoAreaCode": "199",
+            "geoAreaName": "Least Developed Countries (LDC)"
+        }
+    ],
+    "geo_coverage_regions": [
+        {
+            "geoAreaCode": "1",
+            "geoAreaName": "World"
+        },
+        {
+            "geoAreaCode": "15",
+            "geoAreaName": "Northern Africa"
+        },
+        {
+            "geoAreaCode": "30",
+            "geoAreaName": "Eastern Asia"
+        },
+        {
+            "geoAreaCode": "34",
+            "geoAreaName": "Southern Asia"
+        },
+        {
+            "geoAreaCode": "35",
+            "geoAreaName": "South-Eastern Asia"
+        },
+        {
+            "geoAreaCode": "62",
+            "geoAreaName": "Central and Southern Asia"
+        },
+        {
+            "geoAreaCode": "143",
+            "geoAreaName": "Central Asia"
+        },
+        {
+            "geoAreaCode": "145",
+            "geoAreaName": "Western Asia"
+        },
+        {
+            "geoAreaCode": "202",
+            "geoAreaName": "Sub-Saharan Africa"
+        },
+        {
+            "geoAreaCode": "419",
+            "geoAreaName": "Latin America and the Caribbean"
+        },
+        {
+            "geoAreaCode": "543",
+            "geoAreaName": "Oceania (exc. Australia and New Zealand)"
+        },
+        {
+            "geoAreaCode": "747",
+            "geoAreaName": "Northern Africa and Western Asia"
+        },
+        {
+            "geoAreaCode": "753",
+            "geoAreaName": "Eastern and South-Eastern Asia"
+        }
+    ],
+    "geo_coverage_countries": []
+}

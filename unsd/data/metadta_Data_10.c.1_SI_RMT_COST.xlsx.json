@@ -1,0 +1,481 @@
+{
+    "fileName": "Data_10.c.1_SI_RMT_COST.xlsx",
+    "goalCode": "10",
+    "goalDesc": "Reduce inequality within and among countries",
+    "targetCode": "10.c",
+    "targetDesc": "By 2030, reduce to less than 3 per cent the transaction costs of migrant remittances and eliminate remittance corridors with costs higher than 5 per cent",
+    "indicatorCode": "10.c.1",
+    "indicatorDesc": "Remittance costs as a proportion of the amount remitted",
+    "indicatorTier": "1",
+    "seriesCode": "SI_RMT_COST",
+    "seriesDesc": "Remittance costs as a proportion of the amount remitted (%)",
+    "seriesRelease": "2019.Q1.G.02",
+    "slices": [
+        {
+            "reportingTypeCode": "G",
+            "seriesCode": "SI_RMT_COST"
+        }
+    ],
+    "time_coverage": [
+        "2011",
+        "2015",
+        "2017"
+    ],
+    "geo_coverage_groups": [],
+    "geo_coverage_regions": [
+        {
+            "geoAreaCode": "1",
+            "geoAreaName": "World"
+        },
+        {
+            "geoAreaCode": "62",
+            "geoAreaName": "Central and Southern Asia"
+        },
+        {
+            "geoAreaCode": "202",
+            "geoAreaName": "Sub-Saharan Africa"
+        },
+        {
+            "geoAreaCode": "419",
+            "geoAreaName": "Latin America and the Caribbean"
+        },
+        {
+            "geoAreaCode": "513",
+            "geoAreaName": "Europe and Northern America"
+        },
+        {
+            "geoAreaCode": "543",
+            "geoAreaName": "Oceania (exc. Australia and New Zealand)"
+        },
+        {
+            "geoAreaCode": "747",
+            "geoAreaName": "Northern Africa and Western Asia"
+        },
+        {
+            "geoAreaCode": "753",
+            "geoAreaName": "Eastern and South-Eastern Asia"
+        }
+    ],
+    "geo_coverage_countries": [
+        {
+            "geoAreaCode": "4",
+            "geoAreaName": "Afghanistan"
+        },
+        {
+            "geoAreaCode": "8",
+            "geoAreaName": "Albania"
+        },
+        {
+            "geoAreaCode": "12",
+            "geoAreaName": "Algeria"
+        },
+        {
+            "geoAreaCode": "24",
+            "geoAreaName": "Angola"
+        },
+        {
+            "geoAreaCode": "31",
+            "geoAreaName": "Azerbaijan"
+        },
+        {
+            "geoAreaCode": "50",
+            "geoAreaName": "Bangladesh"
+        },
+        {
+            "geoAreaCode": "51",
+            "geoAreaName": "Armenia"
+        },
+        {
+            "geoAreaCode": "68",
+            "geoAreaName": "Bolivia (Plurinational State of)"
+        },
+        {
+            "geoAreaCode": "70",
+            "geoAreaName": "Bosnia and Herzegovina"
+        },
+        {
+            "geoAreaCode": "72",
+            "geoAreaName": "Botswana"
+        },
+        {
+            "geoAreaCode": "76",
+            "geoAreaName": "Brazil"
+        },
+        {
+            "geoAreaCode": "100",
+            "geoAreaName": "Bulgaria"
+        },
+        {
+            "geoAreaCode": "104",
+            "geoAreaName": "Myanmar"
+        },
+        {
+            "geoAreaCode": "112",
+            "geoAreaName": "Belarus"
+        },
+        {
+            "geoAreaCode": "116",
+            "geoAreaName": "Cambodia"
+        },
+        {
+            "geoAreaCode": "120",
+            "geoAreaName": "Cameroon"
+        },
+        {
+            "geoAreaCode": "132",
+            "geoAreaName": "Cabo Verde"
+        },
+        {
+            "geoAreaCode": "144",
+            "geoAreaName": "Sri Lanka"
+        },
+        {
+            "geoAreaCode": "156",
+            "geoAreaName": "China"
+        },
+        {
+            "geoAreaCode": "170",
+            "geoAreaName": "Colombia"
+        },
+        {
+            "geoAreaCode": "174",
+            "geoAreaName": "Comoros"
+        },
+        {
+            "geoAreaCode": "178",
+            "geoAreaName": "Congo"
+        },
+        {
+            "geoAreaCode": "188",
+            "geoAreaName": "Costa Rica"
+        },
+        {
+            "geoAreaCode": "191",
+            "geoAreaName": "Croatia"
+        },
+        {
+            "geoAreaCode": "192",
+            "geoAreaName": "Cuba"
+        },
+        {
+            "geoAreaCode": "204",
+            "geoAreaName": "Benin"
+        },
+        {
+            "geoAreaCode": "214",
+            "geoAreaName": "Dominican Republic"
+        },
+        {
+            "geoAreaCode": "218",
+            "geoAreaName": "Ecuador"
+        },
+        {
+            "geoAreaCode": "222",
+            "geoAreaName": "El Salvador"
+        },
+        {
+            "geoAreaCode": "231",
+            "geoAreaName": "Ethiopia"
+        },
+        {
+            "geoAreaCode": "232",
+            "geoAreaName": "Eritrea"
+        },
+        {
+            "geoAreaCode": "233",
+            "geoAreaName": "Estonia"
+        },
+        {
+            "geoAreaCode": "242",
+            "geoAreaName": "Fiji"
+        },
+        {
+            "geoAreaCode": "268",
+            "geoAreaName": "Georgia"
+        },
+        {
+            "geoAreaCode": "270",
+            "geoAreaName": "Gambia"
+        },
+        {
+            "geoAreaCode": "275",
+            "geoAreaName": "State of Palestine"
+        },
+        {
+            "geoAreaCode": "288",
+            "geoAreaName": "Ghana"
+        },
+        {
+            "geoAreaCode": "320",
+            "geoAreaName": "Guatemala"
+        },
+        {
+            "geoAreaCode": "328",
+            "geoAreaName": "Guyana"
+        },
+        {
+            "geoAreaCode": "332",
+            "geoAreaName": "Haiti"
+        },
+        {
+            "geoAreaCode": "340",
+            "geoAreaName": "Honduras"
+        },
+        {
+            "geoAreaCode": "348",
+            "geoAreaName": "Hungary"
+        },
+        {
+            "geoAreaCode": "356",
+            "geoAreaName": "India"
+        },
+        {
+            "geoAreaCode": "360",
+            "geoAreaName": "Indonesia"
+        },
+        {
+            "geoAreaCode": "384",
+            "geoAreaName": "C\u00f4te d'Ivoire"
+        },
+        {
+            "geoAreaCode": "388",
+            "geoAreaName": "Jamaica"
+        },
+        {
+            "geoAreaCode": "398",
+            "geoAreaName": "Kazakhstan"
+        },
+        {
+            "geoAreaCode": "400",
+            "geoAreaName": "Jordan"
+        },
+        {
+            "geoAreaCode": "404",
+            "geoAreaName": "Kenya"
+        },
+        {
+            "geoAreaCode": "417",
+            "geoAreaName": "Kyrgyzstan"
+        },
+        {
+            "geoAreaCode": "418",
+            "geoAreaName": "Lao People's Democratic Republic"
+        },
+        {
+            "geoAreaCode": "422",
+            "geoAreaName": "Lebanon"
+        },
+        {
+            "geoAreaCode": "426",
+            "geoAreaName": "Lesotho"
+        },
+        {
+            "geoAreaCode": "428",
+            "geoAreaName": "Latvia"
+        },
+        {
+            "geoAreaCode": "430",
+            "geoAreaName": "Liberia"
+        },
+        {
+            "geoAreaCode": "440",
+            "geoAreaName": "Lithuania"
+        },
+        {
+            "geoAreaCode": "450",
+            "geoAreaName": "Madagascar"
+        },
+        {
+            "geoAreaCode": "454",
+            "geoAreaName": "Malawi"
+        },
+        {
+            "geoAreaCode": "458",
+            "geoAreaName": "Malaysia"
+        },
+        {
+            "geoAreaCode": "466",
+            "geoAreaName": "Mali"
+        },
+        {
+            "geoAreaCode": "484",
+            "geoAreaName": "Mexico"
+        },
+        {
+            "geoAreaCode": "498",
+            "geoAreaName": "Republic of Moldova"
+        },
+        {
+            "geoAreaCode": "504",
+            "geoAreaName": "Morocco"
+        },
+        {
+            "geoAreaCode": "508",
+            "geoAreaName": "Mozambique"
+        },
+        {
+            "geoAreaCode": "516",
+            "geoAreaName": "Namibia"
+        },
+        {
+            "geoAreaCode": "524",
+            "geoAreaName": "Nepal"
+        },
+        {
+            "geoAreaCode": "548",
+            "geoAreaName": "Vanuatu"
+        },
+        {
+            "geoAreaCode": "558",
+            "geoAreaName": "Nicaragua"
+        },
+        {
+            "geoAreaCode": "566",
+            "geoAreaName": "Nigeria"
+        },
+        {
+            "geoAreaCode": "586",
+            "geoAreaName": "Pakistan"
+        },
+        {
+            "geoAreaCode": "591",
+            "geoAreaName": "Panama"
+        },
+        {
+            "geoAreaCode": "600",
+            "geoAreaName": "Paraguay"
+        },
+        {
+            "geoAreaCode": "604",
+            "geoAreaName": "Peru"
+        },
+        {
+            "geoAreaCode": "608",
+            "geoAreaName": "Philippines"
+        },
+        {
+            "geoAreaCode": "616",
+            "geoAreaName": "Poland"
+        },
+        {
+            "geoAreaCode": "642",
+            "geoAreaName": "Romania"
+        },
+        {
+            "geoAreaCode": "646",
+            "geoAreaName": "Rwanda"
+        },
+        {
+            "geoAreaCode": "686",
+            "geoAreaName": "Senegal"
+        },
+        {
+            "geoAreaCode": "688",
+            "geoAreaName": "Serbia"
+        },
+        {
+            "geoAreaCode": "694",
+            "geoAreaName": "Sierra Leone"
+        },
+        {
+            "geoAreaCode": "704",
+            "geoAreaName": "Viet Nam"
+        },
+        {
+            "geoAreaCode": "706",
+            "geoAreaName": "Somalia"
+        },
+        {
+            "geoAreaCode": "710",
+            "geoAreaName": "South Africa"
+        },
+        {
+            "geoAreaCode": "716",
+            "geoAreaName": "Zimbabwe"
+        },
+        {
+            "geoAreaCode": "728",
+            "geoAreaName": "South Sudan"
+        },
+        {
+            "geoAreaCode": "729",
+            "geoAreaName": "Sudan"
+        },
+        {
+            "geoAreaCode": "740",
+            "geoAreaName": "Suriname"
+        },
+        {
+            "geoAreaCode": "748",
+            "geoAreaName": "Eswatini"
+        },
+        {
+            "geoAreaCode": "760",
+            "geoAreaName": "Syrian Arab Republic"
+        },
+        {
+            "geoAreaCode": "762",
+            "geoAreaName": "Tajikistan"
+        },
+        {
+            "geoAreaCode": "764",
+            "geoAreaName": "Thailand"
+        },
+        {
+            "geoAreaCode": "768",
+            "geoAreaName": "Togo"
+        },
+        {
+            "geoAreaCode": "776",
+            "geoAreaName": "Tonga"
+        },
+        {
+            "geoAreaCode": "788",
+            "geoAreaName": "Tunisia"
+        },
+        {
+            "geoAreaCode": "792",
+            "geoAreaName": "Turkey"
+        },
+        {
+            "geoAreaCode": "800",
+            "geoAreaName": "Uganda"
+        },
+        {
+            "geoAreaCode": "804",
+            "geoAreaName": "Ukraine"
+        },
+        {
+            "geoAreaCode": "807",
+            "geoAreaName": "North Macedonia"
+        },
+        {
+            "geoAreaCode": "818",
+            "geoAreaName": "Egypt"
+        },
+        {
+            "geoAreaCode": "834",
+            "geoAreaName": "United Republic of Tanzania"
+        },
+        {
+            "geoAreaCode": "860",
+            "geoAreaName": "Uzbekistan"
+        },
+        {
+            "geoAreaCode": "882",
+            "geoAreaName": "Samoa"
+        },
+        {
+            "geoAreaCode": "887",
+            "geoAreaName": "Yemen"
+        },
+        {
+            "geoAreaCode": "894",
+            "geoAreaName": "Zambia"
+        },
+        {
+            "geoAreaCode": "598",
+            "geoAreaName": "Papua New Guinea"
+        }
+    ]
+}
